@@ -5,13 +5,12 @@
 		<title>講師から</title>
 	</head>
 	<body>
+		<p><audio src="0.mp3" controls id="audio1"></audio></p>
 		<p><button onclick="start();">開始</button></p>
 		<script>
-			const audio=new Audio();
-			audio.src="0.mp3";
+			const audio1=document.getElementById("audio1");
 			function start(){
-				audio.play();
-				window.open('https://classroom.google.com/u/4/c/OTU0MzAwNjU5MDVa/m/MTAxNDYwNDczMjE1/details','_blank');
+				audio1.play();
 			}
 		</script>
 
