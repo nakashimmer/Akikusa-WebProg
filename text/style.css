@@ -22,7 +22,7 @@ pre{
 code{font-family:menlo;tab-size:2;}
 p,li{line-height: 1.5em;margin:0.5em;}
 ol,ul{margin-left:2em;}
-.s:before{content:"👩‍🦰 ";}
+.s:before{content:"👩‍🦰 ";font-size:1.5em}
 .s{font-weight: bold;margin:1em;text-indent:-0.5em;}
 ol.no{list-style-type: none;}
 audio{
