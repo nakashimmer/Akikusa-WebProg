@@ -7,75 +7,75 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
+		<div id="wrap">
+			<audio controls src="4.mp3"></audio>
 
-<audio controls src="4.mp3"></audio>
+			<section>
+				<h2>5時限目：CSSの操作</h2>
+				<p class=s>先生、おはようございます。</p>
+				<p>みなさん、おはようございます。今日はCSSの操作です。</p>
+				<p class=s>2学期の時にCSSは学びましたけど、ページのデザイン以外にもアニメーションや図形を描くこともできるんですよね。すごいなぁと思います。</p>
+				<p>そうですね、ただCSSだけでは最初に書いたソースコードのとおりしか動作せず、途中で変更することはできませんよね。それをJavaScriptでコントロールできたらもっと楽しいですね。</p>
+				<p class=s>お〜！すてき！</p>
+				<p>では早速始めましょう。</p>
+				<p>次のコードを考えましょう。重要でないところは省略しています。</p>
+				<pre><code>&lt;style&gt;
+					*{margin:0px;padding:0px;}
+					#box1{
+						margin:50px auto;
+						font-size:20px;
+						width:200px;height:200px;
+						line-height:200px;text-align:center;
+						border:1px solid gray;
+					}
+				&lt;/style&gt;
+				︙
+				&lt;div id="box1" onclick="btn1();"&gt;BOX1&lt;/div&gt;
+				&lt;script&gt;
+					const box1 = document.getElementById("box1");
+					function btn1(){	
 
-<section>
-<h2>5時限目：CSSの操作</h2>
-<p class=s>先生、おはようございます。</p>
-<p>みなさん、おはようございます。今日はCSSの操作です。</p>
-<p class=s>2学期の時にCSSは学びましたけど、ページのデザイン以外にもアニメーションや図形を描くこともできるんですよね。すごいなぁと思います。</p>
-<p>そうですね、ただCSSだけでは最初に書いたソースコードのとおりしか動作せず、途中で変更することはできませんよね。それをJavaScriptでコントロールできたらもっと楽しいですね。</p>
-<p class=s>お〜！すてき！</p>
-<p>では早速始めましょう。</p>
-<p>次のコードを考えましょう。重要でないところは省略しています。</p>
-<pre><code>&lt;style&gt;
-	*{margin:0px;padding:0px;}
-	#box1{
-		margin:50px auto;
-		font-size:20px;
-		width:200px;height:200px;
-		line-height:200px;text-align:center;
-		border:1px solid gray;
-	}
-&lt;/style&gt;
-︙
-&lt;div id="box1" onclick="btn1();"&gt;BOX1&lt;/div&gt;
-&lt;script&gt;
-	const box1 = document.getElementById("box1");
-	function btn1(){	
-
-	}
-&lt;/script&gt;</code></pre>
-<p class=s>ふむふむ、コンテンツの幅と高さが200pxで1pxの枠線の正方形ですね。</p>
-<p>さすがです。コードだけでスタイルがわかるようになったんですね。</p>
-<p class=s>はい！</p>
-<hr>
+					}
+				&lt;/script&gt;</code></pre>
+				<p class=s>ふむふむ、コンテンツの幅と高さが200pxで1pxの枠線の正方形ですね。</p>
+				<p>さすがです。コードだけでスタイルがわかるようになったんですね。</p>
+				<p class=s>はい！</p>
+				<hr>
 
 
-<h3>1.style</h3>
-<p>では、btn1()の関数の定義をします。もし、文字の色を赤にしたければCSSではこのように書きますね。</p>
-<pre><code>#box1{color:red;}</code></pre>
-<p>JavaScriptでは「.style」を使ってこのように書きます。キーワードなどの値は必ずダブルクオーテーションマークで挟んでください。</p>
-<pre><code>box1.style.color="red";</code></pre>
-<p>みなさんが知っているCSSのプロパティを.styleの次に書いて、値を単位とともに"〜"の中に書けば、それでOKです。ルールはとても簡単です。</p>
-<p class=s>すごい！じゃ、これを付け足したらどうかな。。。</p>
-<pre><code>box1.style.width = "500px";
-box1.style.height = "300px"; 
-box1.style.transform = "rotate(30deg)";</code></pre>
-<p class=s>要素をクリックしたら大きくなって回転しました！じゃ、背景色も変えちゃお！次のコードを追加っと。</p>
-<pre><code>box1.style.background-color = "green";</code></pre>
-<p class=s>あれ、動かなくなりました。。。</p>
-<hr>
+				<h3>1.style</h3>
+				<p>では、btn1()の関数の定義をします。もし、文字の色を赤にしたければCSSではこのように書きますね。</p>
+				<pre><code>#box1{color:red;}</code></pre>
+				<p>JavaScriptでは「.style」を使ってこのように書きます。キーワードなどの値は必ずダブルクオーテーションマークで挟んでください。</p>
+				<pre><code>box1.style.color="red";</code></pre>
+				<p>みなさんが知っているCSSのプロパティを.styleの次に書いて、値を単位とともに"〜"の中に書けば、それでOKです。ルールはとても簡単です。</p>
+				<p class=s>すごい！じゃ、これを付け足したらどうかな。。。</p>
+				<pre><code>box1.style.width = "500px";
+				box1.style.height = "300px"; 
+				box1.style.transform = "rotate(30deg)";</code></pre>
+				<p class=s>要素をクリックしたら大きくなって回転しました！じゃ、背景色も変えちゃお！次のコードを追加っと。</p>
+				<pre><code>box1.style.background-color = "green";</code></pre>
+				<p class=s>あれ、動かなくなりました。。。</p>
+				<hr>
 
-<h3>2.ハイフンを含んだCSS</h3>
-<p>何かがまずかったんですね、背景色のコード、なにかおかしなところはないですか？</p>
-<p class=s>（おかしいところって、colorと同じようにbackground-colorってやっただけなのに）う〜〜〜〜ん。</p>
-<p>私達はscript部屋のプログラムの住人ですよね。</p>
-<p class=s>はい</p>
-<p>プログラムの得意なことってなんでしょう。</p>
-<p class=s>え、計算ですか、、、あ！マイナスの記号がある！</p>
-<p>そうですね、CSSでのプロパティのハイフンは、script内ではマイナスの記号になってしまいます。ですから、これはまずいですね。</p>
-<p>そこで、ハイフンを含んだCSSは、ハイフンを消して、次の単語の最初の文字を大文字にするルールがあります。</p>
-<pre><code>box1.style.backgroundColor = "green";</code></pre>
-<p class=s>先生、できました！</p>
-<p>このルールだけ守れば、CSSのコントロールは十分でしょう。</p>
-<p>そこで最後にもう一つだけ。</p>
-<p>次のCSSをstyle要素内に追加してください。</p>
-<pre><code>#box1{transition:all 1s linear;}</code></pre>
-<p class=s>先生！すごい！</p>
-<p>どうなったかは実際に試してみてください。今日はここまでです。</p>
-</section>
-
-</body>
+				<h3>2.ハイフンを含んだCSS</h3>
+				<p>何かがまずかったんですね、背景色のコード、なにかおかしなところはないですか？</p>
+				<p class=s>（おかしいところって、colorと同じようにbackground-colorってやっただけなのに）う〜〜〜〜ん。</p>
+				<p>私達はscript部屋のプログラムの住人ですよね。</p>
+				<p class=s>はい</p>
+				<p>プログラムの得意なことってなんでしょう。</p>
+				<p class=s>え、計算ですか、、、あ！マイナスの記号がある！</p>
+				<p>そうですね、CSSでのプロパティのハイフンは、script内ではマイナスの記号になってしまいます。ですから、これはまずいですね。</p>
+				<p>そこで、ハイフンを含んだCSSは、ハイフンを消して、次の単語の最初の文字を大文字にするルールがあります。</p>
+				<pre><code>box1.style.backgroundColor = "green";</code></pre>
+				<p class=s>先生、できました！</p>
+				<p>このルールだけ守れば、CSSのコントロールは十分でしょう。</p>
+				<p>そこで最後にもう一つだけ。</p>
+				<p>次のCSSをstyle要素内に追加してください。</p>
+				<pre><code>#box1{transition:all 1s linear;}</code></pre>
+				<p class=s>先生！すごい！</p>
+				<p>どうなったかは実際に試してみてください。今日はここまでです。</p>
+			</section>
+		</div>
+	</body>
 </html>

@@ -7,92 +7,91 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
+		<div id="wrap">
+			<audio controls src="3.mp3"></audio>
 
-<audio controls src="3.mp3"></audio>
+			<section>
+				<h2>4時限目：データの入力</h2>
+				<p class=s>先生、おはようございます。きょうはデータの入力ですか？</p>
+				<p>みなさん、おはようございます。はい、データの入力です。</p>
+				<p>みなさんは、すでにページへの表示はできるようになりましたが、例えば文字を変えたいとき、毎回プログラムを書き直すのは不便ですよね。</p>
+				<p class=s>はい！</p>
+				<p>ですので、データを入力する部品を取り付ければ、そのプログラムはとても応用が効くものになります。</p>
+				<p>前回のファイルを準備しましょう。</p>
+				<pre><code>&lt;p&gt;&lt;button onclick="btn1();"&gt;押す&lt;/button&gt;&lt;/p&gt;
+				&lt;p id="output1"&gt;おはようございます。&lt;/p&gt;
 
-<section>
-<h2>4時限目：データの入力</h2>
-<p class=s>先生、おはようございます。きょうはデータの入力ですか？</p>
-<p>みなさん、おはようございます。はい、データの入力です。</p>
-<p>みなさんは、すでにページへの表示はできるようになりましたが、例えば文字を変えたいとき、毎回プログラムを書き直すのは不便ですよね。</p>
-<p class=s>はい！</p>
-<p>ですので、データを入力する部品を取り付ければ、そのプログラムはとても応用が効くものになります。</p>
-<p>前回のファイルを準備しましょう。</p>
-<pre><code>&lt;p&gt;&lt;button onclick="btn1();"&gt;押す&lt;/button&gt;&lt;/p&gt;
-&lt;p id="output1"&gt;おはようございます。&lt;/p&gt;
+				&lt;script&gt;
+					const output1 = document.getElementById("output1");
 
-&lt;script&gt;
-	const output1 = document.getElementById("output1");
+					function btn1(){
+						output1.innerHTML = "こんにちは。";
+					}
+				&lt;/script&gt;</code></pre>
+				<hr>
 
-	function btn1(){
-		output1.innerHTML = "こんにちは。";
-	}
-&lt;/script&gt;</code></pre>
-<hr>
+				<h3>1.input要素</h3>
+				<p>では次のコードをボタンの上に追加してください。input要素は入力のパーツです。type属性は種類、ここではtextの種類の入力のパーツということになります。</p>
+				<pre><code>&lt;p&gt;&lt;input type="text" id="input1"&gt;&lt;/p&gt;</code></pre>
+				<p class=s>四角い枠が表示されました。文字も書き込めました。</p>
+				<p>続いて…</p>
+				<p class=s>この入力のパーツも扱うために要素の取得ですね。const output1の上の行でいいですか。</p>
+				<pre><code>const input1 = document.getElementById("input1");</code></pre>
+				<p>そのとおりです。次に関数の中のこれを修正しましょう。</p>
+				<pre><code>output1.innerHTML = "こんにちは。";</code></pre>
+				<p>入力のパーツ(input1)の値をoutput1の内側のテキストに代入します。</p>
+				<p>入力のパーツの値は「input1.value」と書きます。そのまんまですね。ですから、</p>
+				<pre><code>output1.innerHTML = input1.value;</code></pre>
+				<p>となります。全体はこのようになります。</p>
+				<pre><code><b>&lt;p&gt;&lt;input type="text" id="input1"&gt;&lt;/p&gt;</b>
+				&lt;p&gt;&lt;button onclick="btn1();"&gt;押す&lt;/button&gt;&lt;/p&gt;
+				&lt;p id="output1"&gt;おはようございます。&lt;/p&gt;
 
-<h3>1.input要素</h3>
-<p>では次のコードをボタンの上に追加してください。input要素は入力のパーツです。type属性は種類、ここではtextの種類の入力のパーツということになります。</p>
-<pre><code>&lt;p&gt;&lt;input type="text" id="input1"&gt;&lt;/p&gt;</code></pre>
-<p class=s>四角い枠が表示されました。文字も書き込めました。</p>
-<p>続いて…</p>
-<p class=s>この入力のパーツも扱うために要素の取得ですね。const output1の上の行でいいですか。</p>
-<pre><code>const input1 = document.getElementById("input1");</code></pre>
-<p>そのとおりです。次に関数の中のこれを修正しましょう。</p>
-<pre><code>output1.innerHTML = "こんにちは。";</code></pre>
-<p>入力のパーツ(input1)の値をoutput1の内側のテキストに代入します。</p>
-<p>入力のパーツの値は「input1.value」と書きます。そのまんまですね。ですから、</p>
-<pre><code>output1.innerHTML = input1.value;</code></pre>
-<p>となります。全体はこのようになります。</p>
-<pre><code><b>&lt;p&gt;&lt;input type="text" id="input1"&gt;&lt;/p&gt;</b>
-&lt;p&gt;&lt;button onclick="btn1();"&gt;押す&lt;/button&gt;&lt;/p&gt;
-&lt;p id="output1"&gt;おはようございます。&lt;/p&gt;
+				&lt;script&gt;
+					<b>const input1 = document.getElementById("input1");</b>
+					const output1 = document.getElementById("output1");
+					function btn1(){
+						output1.innerHTML = <b>input1.value</b>;
+					}
+				&lt;/script&gt;</code></pre>
+				<p class=s>とてもわかりやすいコードですね。</p>
+				<p>そうですね。今まで学んだ内容でここまでできました。</p>
+				<hr>
 
-&lt;script&gt;
-	<b>const input1 = document.getElementById("input1");</b>
-	const output1 = document.getElementById("output1");
-	function btn1(){
-		output1.innerHTML = <b>input1.value</b>;
-	}
-&lt;/script&gt;</code></pre>
-<p class=s>とてもわかりやすいコードですね。</p>
-<p>そうですね。今まで学んだ内容でここまでできました。</p>
-<hr>
+				<h3>2.コンテンツを書き変える</h3>
+				<p>では、input要素にタグを含んだ文字を入れてみてください。例えば</p>
+				<pre><code>&lt;h1&gt;大見出し&lt;/h1&gt;</code></pre>
+				<p class=s>大きくなりました！h1要素が有効になっているんですね。</p>
+				<p>では次にこれはどうでしょう。</p>
+				<pre><code>&lt;img src="image.png" alt="画像"&gt;</code></pre>
+				<p>画像が表示されました。</p>
+				<p>ここで考えてみましょう、「.innerHTML」は最初テキストを書き変えると言いましたが、タグも有効だとわかりましたので、実は、「.innerHTML」はHTMLを書き換えることができるのです。つまり、ページ全体をボタンひとつで書き変えることもできるのです。</p>
+				<p class=s>ひゃ〜すごい！</p>
+				<hr>
 
-<h3>2.コンテンツを書き変える</h3>
-<p>では、input要素にタグを含んだ文字を入れてみてください。例えば</p>
-<pre><code>&lt;h1&gt;大見出し&lt;/h1&gt;</code></pre>
-<p class=s>大きくなりました！h1要素が有効になっているんですね。</p>
-<p>では次にこれはどうでしょう。</p>
-<pre><code>&lt;img src="image.png" alt="画像"&gt;</code></pre>
-<p>画像が表示されました。</p>
-<p>ここで考えてみましょう、「.innerHTML」は最初テキストを書き変えると言いましたが、タグも有効だとわかりましたので、実は、「.innerHTML」はHTMLを書き換えることができるのです。つまり、ページ全体をボタンひとつで書き変えることもできるのです。</p>
-<p class=s>ひゃ〜すごい！</p>
-<hr>
+				<h3>3.placeholder</h3>
+				<p>例えば、郵便番号を入力するとき、ハイフンは入れますか？入れませんか？</p>
+				<p class=s>う〜ん、どっちかなぁ迷います。説明が書いてあればそのとおりにします。</p>
+				<p>そんなときはplaceholderを使ってみましょう。placeholder属性は正式な値が入るまで表示しているものです。</p>
+				<pre><code>&lt;p&gt;&lt;input type="text" id="input1" placeholder="000-0000"&gt;&lt;/p&gt;</code></pre>
+				<p class=s>薄くサンプルが見えました。じゃ、ハイフンを入れます！</p>
+				<hr>
 
-<h3>3.placeholder</h3>
-<p>例えば、郵便番号を入力するとき、ハイフンは入れますか？入れませんか？</p>
-<p class=s>う〜ん、どっちかなぁ迷います。説明が書いてあればそのとおりにします。</p>
-<p>そんなときはplaceholderを使ってみましょう。placeholder属性は正式な値が入るまで表示しているものです。</p>
-<pre><code>&lt;p&gt;&lt;input type="text" id="input1" placeholder="000-0000"&gt;&lt;/p&gt;</code></pre>
-<p class=s>薄くサンプルが見えました。じゃ、ハイフンを入れます！</p>
-<hr>
+				<h3>4.input要素のtype属性</h3>
+				<p>input要素を次のコードに順次書き換えてみてください。</p>
+				<h4>スライダ</h4>
+				<pre><code>&lt;p&gt;&lt;input type="range" id="input1"&gt;&lt;/p&gt;</code></pre>
 
-<h3>4.input要素のtype属性</h3>
-<p>input要素を次のコードに順次書き換えてみてください。</p>
-<h4>スライダ</h4>
-<pre><code>&lt;p&gt;&lt;input type="range" id="input1"&gt;&lt;/p&gt;</code></pre>
+				<h4>カレンダ</h4>
+				<pre><code></code>&lt;p&gt;&lt;input type="date" id="input1"&gt;&lt;/p&gt;</pre>
 
-<h4>カレンダ</h4>
-<pre><code></code>&lt;p&gt;&lt;input type="date" id="input1"&gt;&lt;/p&gt;</pre>
-
-<h4>カラーピッカ</h4>
-<pre><code>&lt;p&gt;&lt;input type="color" id="input1"&gt;&lt;/p&gt;</code></pre>
-<p class=s>入力しました！値が変わります！</p>
-<p>このように、私達は様々な方法でプログラムにデータを入力することができるようになりました。</p>
-<p>プログラムと会話しているみたいです。</p>
-<p class=s>「会話」まさにそのとおりですね！ </p>
-</section>
-
-
-</body>
+				<h4>カラーピッカ</h4>
+				<pre><code>&lt;p&gt;&lt;input type="color" id="input1"&gt;&lt;/p&gt;</code></pre>
+				<p class=s>入力しました！値が変わります！</p>
+				<p>このように、私達は様々な方法でプログラムにデータを入力することができるようになりました。</p>
+				<p>プログラムと会話しているみたいです。</p>
+				<p class=s>「会話」まさにそのとおりですね！ </p>
+			</section>
+		</div>
+	</body>
 </html>
