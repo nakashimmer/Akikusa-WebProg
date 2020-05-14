@@ -9,8 +9,9 @@ h2{font-size:2em;margin:2em 0 1em 0;}
 h3{font-size:1.5em;}
 h4{font-size:1em;margin:1em 0 0em;}
 section{
-	width:596px;
+	width:600px;
 	margin:0 auto;
+	padding:0.5em;
 }
 hr{border:1px solid gray;margin:2em;}
 pre{
