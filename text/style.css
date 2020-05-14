@@ -1,0 +1,33 @@
+*{margin:0px;padding:0px;font-size:16px;}
+h1{font-size:3em;
+	border-width:2px 0;
+	border-style: solid;
+	border-color:black;
+	margin:5em 0.5em;text-align:center; }
+h2{font-size:2em;margin:2em 0 1em 0;}
+h3{font-size:1.5em;}
+h4{font-size:1em;margin:1em 0 0em;}
+section{
+	width:600px;
+	margin:0 auto;
+}
+hr{border:1px solid gray;margin:2em;}
+pre{
+	border:2px solid black;
+	padding:1em;margin:0 1em;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	overflow: auto;
+}
+code{font-family:menlo;tab-size:2;}
+p,li{line-height: 1.5em;margin:0.5em;}
+ol,ul{margin-left:2em;}
+.s:before{content:"👩‍🦰 ";}
+.s{font-weight: bold;margin:1em;text-indent:-0.5em;}
+ol.no{list-style-type: none;}
+audio{
+	background-color:#f1f1f1;
+	width:600px;
+	display: block;
+	margin: 0 auto;
+}

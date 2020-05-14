@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>秋草学園テキスト</title>
+		<meta name="viewport" width="600">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+
+<audio controls src="6.mp3"></audio>
+
+<section>
+<h2>7時限目：計算</h2>
+<p class=s>先生、おはようございます。</p>
+<p>みなさん、おはようございます。きょうは変数の計算です。</p>
+<p class=s>はーい、がんばります。</p>
+
+<h3>1.足し算</h3>
+<p>これはもう大丈夫ですね。笑</p>
+<pre><code>&lt;p id="output1"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+	const output1 = document.getElementById("output1");
+
+	let a = 1;
+	let b = 3;
+	let c = a+b;
+	output1.innerHTML = c;
+&lt;/script&gt;</code></pre>
+<hr>
+
+<h3>2.引き算</h3>
+<p>これも大丈夫でしょう。</p>
+<pre><code>	let c = a-b;</code></pre>
+<hr>
+
+<h3>3.掛け算</h3>
+<p>✕の記号はないのでアスタリスク「*」を用います。</p>
+<pre><code>	let c = a*b;</code></pre>
+<hr>
+
+<h3>4.割り算</h3>
+<p>÷の記号はないのでスラッシュ「/」を用います。</p>
+<pre><code>	let c = a/b;</code></pre>
+<hr>
+
+<h3>5.余り算</h3>
+<p>割った商の余りを知ることができます。「%」の記号を使います。</p>
+<pre><code>	let c = a%b;</code></pre>
+<hr>
+
+<h3>6.文字列の連結</h3>
+<p>じゃ、これはどうなるでしょう。</p>
+<pre><code>&lt;p id="output1"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+	const output1 = document.getElementById("output1");
+
+	let a = "なかしまぁ";
+	let b = "先生";
+	let c = a+b;
+	output1.innerHTML = c;
+&lt;/script&gt;</code></pre>
+<p class=s>あれ、変数に文字が代入されてる。「なかしまぁ先生」となるのかな？</p>
+<p>そのとおりです。変数には文字列も代入できます。そして「+」の記号は、左右どちらかが文字列だったら、文字列の連結になります。</p>
+<hr>
+
+<h3>7.if文</h3>
+<p>次にif文です。</p>
+<p class=s>あ、表計算とかで見たことがあります。</p>
+<p>そうですね、ちょっと書き方が違うのでそこだけ注意してください。数当てゲームを作りましょう。変数n1には当ててほしい正解の値（ここでは50）を代入し、入力した値を変数n2に入れて比較しています。n1とn2が等しければ "正解" と表示し、そうでなければ "残念" と表示します。</p>
+<pre><code>&lt;input type="text" id="input1"&gt;
+&lt;button onclick="btn1();"&gt;チャレンジ&lt;/button&gt;
+&lt;p id="output1"&gt;結果を表示&lt;/p&gt;
+
+&lt;script&gt;
+	const input1 = document.getElementById("input1");
+	const output1 = document.getElementById("output1");
+
+	let n1 = 50;
+
+	function btn1(){
+		let n2 = Number(input1.value);
+
+		if(n1 === n2){
+			output1.innerHTML = "正解";
+		}else{
+			output1.innerHTML = "残念";
+		}
+	}
+&lt;/script&gt;</code></pre>
+<p class=s>先生、Number()ってなんですか？</p>
+<p>入力した値は「input.value」ですよね。例えば「47」と入力したら、値はどうなりますか？</p>
+<p class=s>数字の「47」です。</p>
+<p>実はinput要素の値は、文字列なんです。「よんじゅうなな」ではなくて「よん・なな」なんですね。ですから、文字列を数字に変換しなければなりません。Number()は丸カッコ内の文字を数字に変えてくれるものです。</p>
+<p class=s>先生、もう一つ。「等しい」の記号が「=」でなく「===」のようですけど。</p>
+<p>JavaScriptでは、「=」は代入という意味で、等しいという意味はありません。「等しい」の記号は「===」を使うようにしましょう。</p>
+<p class=s>やっとスッキリしました。</p>
+<hr>
+
+<h3>8.Math(数学のオブジェクト)</h3>
+<p>細かい計算をするにはMathオブジェクトを使います。ざっくり見ていきましょう。</p>
+
+<h4>切り捨て</h4>
+<p>3.14をMathが切り捨てます。</p>
+<pre><code>let a = Math.floor(3.14);</code></pre>
+
+<h4>四捨五入</h4>
+<p>3.14をMathが四捨五入します。</p>
+<pre><code>let a = Math.round(3.14);</code></pre> 
+
+<h4>切り上げ</h4>
+<p>3.14をMathが切り上げます。</p>
+<pre><code>let a = Math.ceil(3.14);</code></pre>
+
+<h4>累乗</h4>
+<p>2の3乗はこのように計算します。powはpowerです。</p>
+<p>ちなみにMath.pow(2, 1/2 )は √2 になります。</p>
+<pre><code>let a = Math.pow(2,3);</code></pre>
+
+<h4>円周率</h4>
+<p>JavaScriptでは角度の計算で円周率がよく出てきます。値を変えたくないのでconstを使いました。</p>
+<pre><code>const pi = Math.PI;</code></pre>
+
+<h4>乱数</h4>
+<p>0以上、1未満の小数を含んだ乱数を得ます。</p>
+<pre><code>let rand = Math.random();</code></pre>
+<p>もし、0,1,2の整数値が欲しい場合はこのようにします。</p>
+<pre><code>let rand = Math.floor( Math.random()*3 );</code></pre>
+<p>これを先の数当てゲームに応用してみてください。</p>
+<p class=s>おおお！数当てゲームががぜん難しくなってきた！正解の値もわからない。。。。</p>
+</section>
+
+</body>
+</html>

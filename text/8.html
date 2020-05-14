@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>秋草学園テキスト</title>
+		<meta name="viewport" width="600">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+
+		<audio controls src="8.mp3"></audio>
+
+<section>
+<h2>8時限目：マルチメディア</h2>
+<p class=s>先生、おはようございます。きょうはマルチメディア？</p>
+<p>みなさん、おはようございます。マルチメディアとして、今日は音声と映像をJavaScriptでコントロールしましょう。例えば、数当てゲームで正解したら結果により違う音が流れたり映像が流れたら楽しいですよね。</p>
+<p class=s>本当ですね！</p>
+<hr>
+<h3>音声をコントロール</h3>
+<p>では、次のコードを用意しましょう。</p>
+<pre><code>&lt;audio id="audio1" src="audio.mp3"&gt;&lt;/audio&gt;</code></pre>
+<p class=s>これは1学期のときにやりました。contorolsつければコントローラが表示されたんですよね。</p>
+<p>そうですね。では要素の取得を行いましょう。</p>
+<pre><code>const audio1 = document.getElementById("audio1");</code></pre>
+<p class=s>OKです。このaudio1を操作するんですね。</p>
+<p>そうです。早速操作してみましょう。</p>
+<h4>再生する</h4>
+<pre><code>audio1.play();</code></pre>
+<h4>一旦停止する</h4>
+<pre><code>audio1.pause();</code></pre>
+<h4>カウンタの値</h4>
+<p>巻き戻しをします。</p>
+<pre><code>audio1.currentTime = 0;</code></pre>
+<h4>音量の値</h4>
+<p>音量を半分にします。</p>
+<pre><code>audio1.volume = 0.5;</code></pre>
+<h4>速度の値</h4>
+<p>速度を1.5倍速にします。</p>
+<pre><code>audio1.playbackRate = 1.5;</code></pre>
+<p>以上をまとめて、操作用のボタンを用いればこのようになります。</p>
+<pre><code>&lt;h1&gt;オーディオ&lt;/h1&gt;
+&lt;p&gt;&lt;audio id="audio1" src="audio.mp3"&gt;&lt;/audio&gt;&lt;/p&gt;
+&lt;p&gt;
+	&lt;button onclick="audio1.play();"&gt;再生&lt;/button&gt;
+	&lt;button onclick="audio1.pause();"&gt;停止&lt;/button&gt;
+	&lt;button onclick="audio1.currentTime=0;"&gt;巻き戻し&lt;/button&gt;
+	&lt;button onclick="audio1.volume -= 0.2;"&gt;音を小さく&lt;/button&gt;
+	&lt;button onclick="audio1.volume += 0.2;"&gt;音を大きく&lt;/button&gt;
+	&lt;button onclick="audio1.playbackRate += 0.5;"&gt;早く&lt;/button&gt;	
+	&lt;button onclick="audio1.playbackRate -= 0.5;"&gt;ゆっくり&lt;/button&gt;
+&lt;/p&gt;
+
+&lt;script&gt;
+	const audio1 = document.getElementById("audio1");
+&lt;/script&gt;</code></pre>
+<p class=s>思ったよりすごく簡単だ…。</p>
+<hr>
+
+<h3>映像をコントロール</h3>
+<p>映像は、音声と同じ方法でコントロールできますので、このようになります。</p>
+<pre><code>&lt;h1&gt;ビデオ&lt;/h1&gt;
+&lt;p&gt;&lt;video id="video1" src="video.mp4"&gt;&lt;/video&gt;&lt;/p&gt;
+
+&lt;p&gt;
+	&lt;button onclick="video1.play();"&gt;再生&lt;/button&gt;
+	&lt;button onclick="video1.pause();"&gt;一旦停止 &lt;/button&gt;
+	&lt;button onclick="video1.currentTime=0;"&gt;巻き戻し&lt;/button&gt;
+	&lt;button onclick="video1.volume -= 0.2;"&gt;音を小さく&lt;/button&gt;
+	&lt;button onclick="video1.volume += 0.2;"&gt;音を大きく&lt;/button&gt;
+	&lt;button onclick="video1.playbackRate += 0.5;"&gt;早く&lt;/button&gt;	
+	&lt;button onclick="video1.playbackRate -= 0.5;"&gt;ゆっくり&lt;/button&gt;
+&lt;/p&gt;
+
+&lt;script&gt;
+	const video1 = document.getElementById("video1");
+&lt;/script&gt;</code></pre>
+<p class=s>先生、面白いです。</p>
+<p>効果音とかにぜひ利用してください。</p>
+</section>
+
+
+</body>
+</html>

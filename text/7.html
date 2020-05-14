@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>秋草学園テキスト</title>
+		<meta name="viewport" width="600">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+
+<audio controls src="7.mp3"></audio>
+
+<section>
+<h2>9時限目：Localストレージ</h2>
+<p class=s>先生、おはようございます。</p>
+<p>みなさん、おはようございます。早速ですが質問です。</p>
+<p>みなさんがゲームを作ったとしましょう。今日は80点ゲットしたとします。PCを閉じて明日になって、ゲームを始めたら0点になっていたらどうでしょう。</p>
+<p class=s>悲しいです。。。</p>
+<p>そうですね、ですから、HTML5にはいくつかデータを保存する方法があります。その中から今日はLocalストレージを学びましょう。</p>
+<hr>
+<h3>1.Localストレージ</h3>
+<p>Localストレージは、ブラウザの中にある貯蔵庫（=ストレージ）に、荷札のようなものとデータをペアにして保存する仕組みです。荷札のようなものをkey、データはvalueと言い、この方式をkey-value方式といいます。またこのストレージを管理しているものが「localStorage」です。</p>
+<p>データの入っているストレージは、それぞれに管理されます。例えば別のURLのサービスと混線することはありません。またブラウザが異なるとストレージも異なるので注意しましょう。</p>
+
+<h4>データの保存</h4>
+<p>keyとvalueをセットにして保存します。</p>
+<pre><code>localStorage.setItem( [keyの値] , [valueの値] );</code></pre>
+<h4>データの読み出し</h4>
+<p>keyを元にvalueを呼び出し、変数aに代入します。</p>
+<pre><code>let a = localStorage.getItem( [keyの値] );</code></pre>
+<h4>データの削除</h4>
+<p>keyに紐付いたvalueを削除します。</p>
+<pre><code>localStorage.removeItem( [keyの値] );</code></pre>
+<h4>全データの削除</h4>
+<p>全データを削除します。</p>
+<pre><code>localStorage.clear();</code></pre>
+<p>簡単なデータ保存サンプルです。</p>
+<pre><code>&lt;h1&gt;データ保存&lt;/h1&gt;
+&lt;p&gt;キー：&lt;input type="text" id="input1"&gt;&lt;/p&gt;	
+&lt;p&gt;値　：&lt;input type="text" id="input2"&gt;&lt;/p&gt;
+&lt;p&gt;
+	&lt;button onclick="clk1();"&gt;保存&lt;/button&gt;
+	&lt;button onclick="clk2();"&gt;読出&lt;/button&gt;
+	&lt;button onclick="clk3();"&gt;削除&lt;/button&gt;
+	&lt;button onclick="clk4();"&gt;全で削除&lt;/button&gt;
+&lt;/p&gt;
+&lt;script&gt;
+	const input1 = document.getElementById("input1");
+	const input2 = document.getElementById("input2");
+
+	function clk1(){
+		localStorage.setItem(input1.value,input2.value);
+	}
+	function clk2(){
+		input2.value=localStorage.getItem(input1.value);
+	}
+	function clk3(){
+		localStorage.removeItem(input1.value);
+	}
+	function clk4(){
+		localStorage.clear();
+	}
+&lt;/script&gt;
+</code></pre>
+</section>
+</body>
+</html>
