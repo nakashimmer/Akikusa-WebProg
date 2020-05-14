@@ -20,23 +20,23 @@
 				<p>では早速始めましょう。</p>
 				<p>次のコードを考えましょう。重要でないところは省略しています。</p>
 				<pre><code>&lt;style&gt;
-					*{margin:0px;padding:0px;}
-					#box1{
-						margin:50px auto;
-						font-size:20px;
-						width:200px;height:200px;
-						line-height:200px;text-align:center;
-						border:1px solid gray;
-					}
-				&lt;/style&gt;
-				︙
-				&lt;div id="box1" onclick="btn1();"&gt;BOX1&lt;/div&gt;
-				&lt;script&gt;
-					const box1 = document.getElementById("box1");
-					function btn1(){	
+	*{margin:0px;padding:0px;}
+	#box1{
+		margin:50px auto;
+		font-size:20px;
+		width:200px;height:200px;
+		line-height:200px;text-align:center;
+		border:1px solid gray;
+	}
+&lt;/style&gt;
+︙
+&lt;div id="box1" onclick="btn1();"&gt;BOX1&lt;/div&gt;
+&lt;script&gt;
+	const box1 = document.getElementById("box1");
+	function btn1(){	
 
-					}
-				&lt;/script&gt;</code></pre>
+	}
+&lt;/script&gt;</code></pre>
 				<p class=s>ふむふむ、コンテンツの幅と高さが200pxで1pxの枠線の正方形ですね。</p>
 				<p>さすがです。コードだけでスタイルがわかるようになったんですね。</p>
 				<p class=s>はい！</p>
@@ -51,8 +51,8 @@
 				<p>みなさんが知っているCSSのプロパティを.styleの次に書いて、値を単位とともに"〜"の中に書けば、それでOKです。ルールはとても簡単です。</p>
 				<p class=s>すごい！じゃ、これを付け足したらどうかな。。。</p>
 				<pre><code>box1.style.width = "500px";
-				box1.style.height = "300px"; 
-				box1.style.transform = "rotate(30deg)";</code></pre>
+box1.style.height = "300px"; 
+box1.style.transform = "rotate(30deg)";</code></pre>
 				<p class=s>要素をクリックしたら大きくなって回転しました！じゃ、背景色も変えちゃお！次のコードを追加っと。</p>
 				<pre><code>box1.style.background-color = "green";</code></pre>
 				<p class=s>あれ、動かなくなりました。。。</p>

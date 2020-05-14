@@ -36,32 +36,31 @@
 				<pre><code>localStorage.clear();</code></pre>
 				<p>簡単なデータ保存サンプルです。</p>
 				<pre><code>&lt;h1&gt;データ保存&lt;/h1&gt;
-				&lt;p&gt;キー：&lt;input type="text" id="input1"&gt;&lt;/p&gt;	
-				&lt;p&gt;値　：&lt;input type="text" id="input2"&gt;&lt;/p&gt;
-				&lt;p&gt;
-					&lt;button onclick="clk1();"&gt;保存&lt;/button&gt;
-					&lt;button onclick="clk2();"&gt;読出&lt;/button&gt;
-					&lt;button onclick="clk3();"&gt;削除&lt;/button&gt;
-					&lt;button onclick="clk4();"&gt;全で削除&lt;/button&gt;
-				&lt;/p&gt;
-				&lt;script&gt;
-					const input1 = document.getElementById("input1");
-					const input2 = document.getElementById("input2");
+&lt;p&gt;キー：&lt;input type="text" id="input1"&gt;&lt;/p&gt;	
+&lt;p&gt;値　：&lt;input type="text" id="input2"&gt;&lt;/p&gt;
+&lt;p&gt;
+	&lt;button onclick="clk1();"&gt;保存&lt;/button&gt;
+	&lt;button onclick="clk2();"&gt;読出&lt;/button&gt;
+	&lt;button onclick="clk3();"&gt;削除&lt;/button&gt;
+	&lt;button onclick="clk4();"&gt;全で削除&lt;/button&gt;
+&lt;/p&gt;
+&lt;script&gt;
+	const input1 = document.getElementById("input1");
+	const input2 = document.getElementById("input2");
 
-					function clk1(){
-						localStorage.setItem(input1.value,input2.value);
-					}
-					function clk2(){
-						input2.value=localStorage.getItem(input1.value);
-					}
-					function clk3(){
-						localStorage.removeItem(input1.value);
-					}
-					function clk4(){
-						localStorage.clear();
-					}
-				&lt;/script&gt;
-				</code></pre>
+	function clk1(){
+		localStorage.setItem(input1.value,input2.value);
+	}
+	function clk2(){
+		input2.value=localStorage.getItem(input1.value);
+	}
+	function clk3(){
+		localStorage.removeItem(input1.value);
+	}
+	function clk4(){
+		localStorage.clear();
+	}
+&lt;/script&gt;</code></pre>
 			</section>
 		</div>
 	</body>

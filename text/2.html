@@ -42,23 +42,23 @@
 				<p>これをプログラムで考えてみましょう。プログラムの複数ある作業ひとつにまとめて名前をつけることを「関数( function )」と言います。</p>
 				<p>作り方の部分は次のように書きます。これを関数の定義といいます。</p>
 				<pre><code>function 関数名(){
-					処理の内容1;
-					処理の内容2;
-					処理の内容3;
-				}</code></pre>
+	処理の内容1;
+	処理の内容2;
+	処理の内容3;
+}</code></pre>
 				<p>レシピだけではクッキーはできませんね。作ってとお願いしなければなりません。関数では次のように書きます。これを関数の実行といいます。</p>
 				<pre><code>関数名();</code></pre>
 				<p>ここで、onclick属性ではbtn1();と書いていましたね。あれがまさに関数の実行です。であれば、関数の定義は「書き変えること」ですから、全体は次のようになります。</p>
 				<pre><code>&lt;p&gt;&lt;button onclick="btn1();"&gt;押す&lt;/button&gt;&lt;/p&gt;
-				&lt;p id="output1"&gt;おはようございます。&lt;/p&gt;
+&lt;p id="output1"&gt;おはようございます。&lt;/p&gt;
 
-				&lt;script&gt;
-					const output1 = document.getElementById("output1");
+&lt;script&gt;
+	const output1 = document.getElementById("output1");
 
-					function btn1(){
-						output1.innerHTML = "こんにちは。";
-					}
-				&lt;/script&gt;</code></pre>
+	function btn1(){
+		output1.innerHTML = "こんにちは。";
+	}
+&lt;/script&gt;</code></pre>
 				<p class=s>先生できました！</p>
 				<p>これで私達は、JavaScriptをコントロールできるようになりました。</p>
 				<p>onclick属性はbutton要素に限らず、divでも画像でも様々な要素でも動作しますから、試してみてください。</p>

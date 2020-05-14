@@ -19,15 +19,15 @@
 				<p>ですので、データを入力する部品を取り付ければ、そのプログラムはとても応用が効くものになります。</p>
 				<p>前回のファイルを準備しましょう。</p>
 				<pre><code>&lt;p&gt;&lt;button onclick="btn1();"&gt;押す&lt;/button&gt;&lt;/p&gt;
-				&lt;p id="output1"&gt;おはようございます。&lt;/p&gt;
+&lt;p id="output1"&gt;おはようございます。&lt;/p&gt;
 
-				&lt;script&gt;
-					const output1 = document.getElementById("output1");
+&lt;script&gt;
+	const output1 = document.getElementById("output1");
 
-					function btn1(){
-						output1.innerHTML = "こんにちは。";
-					}
-				&lt;/script&gt;</code></pre>
+	function btn1(){
+		output1.innerHTML = "こんにちは。";
+	}
+&lt;/script&gt;</code></pre>
 				<hr>
 
 				<h3>1.input要素</h3>
@@ -44,16 +44,16 @@
 				<pre><code>output1.innerHTML = input1.value;</code></pre>
 				<p>となります。全体はこのようになります。</p>
 				<pre><code><b>&lt;p&gt;&lt;input type="text" id="input1"&gt;&lt;/p&gt;</b>
-				&lt;p&gt;&lt;button onclick="btn1();"&gt;押す&lt;/button&gt;&lt;/p&gt;
-				&lt;p id="output1"&gt;おはようございます。&lt;/p&gt;
+&lt;p&gt;&lt;button onclick="btn1();"&gt;押す&lt;/button&gt;&lt;/p&gt;
+&lt;p id="output1"&gt;おはようございます。&lt;/p&gt;
 
-				&lt;script&gt;
-					<b>const input1 = document.getElementById("input1");</b>
-					const output1 = document.getElementById("output1");
-					function btn1(){
-						output1.innerHTML = <b>input1.value</b>;
-					}
-				&lt;/script&gt;</code></pre>
+&lt;script&gt;
+	<b>const input1 = document.getElementById("input1");</b>
+	const output1 = document.getElementById("output1");
+	function btn1(){
+		output1.innerHTML = <b>input1.value</b>;
+	}
+&lt;/script&gt;</code></pre>
 				<p class=s>とてもわかりやすいコードですね。</p>
 				<p>そうですね。今まで学んだ内容でここまでできました。</p>
 				<hr>
