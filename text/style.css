@@ -28,6 +28,7 @@ ol.no{list-style-type: none;}
 audio{
 	background-color:#f1f1f1;
 	width:600px;
+	height:54px;
 	display: block;
 	margin: 0 auto;
 }
