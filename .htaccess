@@ -1,0 +1,4 @@
+SetEnvIf Referer "^https://classroom.google.com/u/4/w/OTU0MzAwNjU5MDVa/t/"
+order deny,allow
+deny from all
+allow from env=ref_ok
