@@ -30,12 +30,12 @@
 	}
 &lt;/style&gt;
 ︙
-&lt;div id="box1" onclick="btn1();"&gt;BOX1&lt;/div&gt;
+&lt;div id="box1" <b>onclick="btn1();"</b>&gt;BOX1&lt;/div&gt;
 &lt;script&gt;
 	const box1 = document.getElementById("box1");
-	function btn1(){	
+	<b>function btn1(){	
 
-	}
+	}</b>
 &lt;/script&gt;</code></pre>
 				<p class=s>ふむふむ、コンテンツの幅と高さが200pxで1pxの枠線の正方形ですね。</p>
 				<p>さすがです。コードだけでスタイルがわかるようになったんですね。</p>
@@ -47,14 +47,14 @@
 				<p>では、btn1()の関数の定義をします。もし、文字の色を赤にしたければCSSではこのように書きますね。</p>
 				<pre><code>#box1{color:red;}</code></pre>
 				<p>JavaScriptでは「.style」を使ってこのように書きます。キーワードなどの値は必ずダブルクオーテーションマークで挟んでください。</p>
-				<pre><code>box1.style.color="red";</code></pre>
+				<pre><code><b>box1.style.color="red";</b></code></pre>
 				<p>みなさんが知っているCSSのプロパティを.styleの次に書いて、値を単位とともに"〜"の中に書けば、それでOKです。ルールはとても簡単です。</p>
 				<p class=s>すごい！じゃ、これを付け足したらどうかな。。。</p>
-				<pre><code>box1.style.width = "500px";
-box1.style.height = "300px"; 
-box1.style.transform = "rotate(30deg)";</code></pre>
+				<pre><code>box1.style<b>.width = "500px"</b>;
+box1.style<b>.height = "300px"</b>; 
+box1.style<b>.transform = "rotate(30deg)";</b></code></pre>
 				<p class=s>要素をクリックしたら大きくなって回転しました！じゃ、背景色も変えちゃお！次のコードを追加っと。</p>
-				<pre><code>box1.style.background-color = "green";</code></pre>
+				<pre><code>box1.style<b>.background-color = "green"</b>;</code></pre>
 				<p class=s>あれ、動かなくなりました。。。</p>
 				<hr>
 
@@ -67,7 +67,7 @@ box1.style.transform = "rotate(30deg)";</code></pre>
 				<p class=s>え、計算ですか、、、あ！マイナスの記号がある！</p>
 				<p>そうですね、CSSでのプロパティのハイフンは、script内ではマイナスの記号になってしまいます。ですから、これはまずいですね。</p>
 				<p>そこで、ハイフンを含んだCSSは、ハイフンを消して、次の単語の最初の文字を大文字にするルールがあります。</p>
-				<pre><code>box1.style.backgroundColor = "green";</code></pre>
+				<pre><code>box1.style<b>.backgroundColor = "green"</b>;</code></pre>
 				<p class=s>先生、できました！</p>
 				<p>このルールだけ守れば、CSSのコントロールは十分でしょう。</p>
 				<p>そこで最後にもう一つだけ。</p>

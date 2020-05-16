@@ -24,16 +24,16 @@
 
 				<h4>データの保存</h4>
 				<p>keyとvalueをセットにして保存します。</p>
-				<pre><code>localStorage.setItem( [keyの値] , [valueの値] );</code></pre>
+				<pre><code>localStorage<b>.setItem( [keyの値] , [valueの値] )</b>;</code></pre>
 				<h4>データの読み出し</h4>
 				<p>keyを元にvalueを呼び出し、変数aに代入します。</p>
-				<pre><code>let a = localStorage.getItem( [keyの値] );</code></pre>
+				<pre><code>let a = localStorage<b>.getItem( [keyの値] )</b>;</code></pre>
 				<h4>データの削除</h4>
 				<p>keyに紐付いたvalueを削除します。</p>
-				<pre><code>localStorage.removeItem( [keyの値] );</code></pre>
+				<pre><code>localStorage<b>.removeItem( [keyの値] )</b>;</code></pre>
 				<h4>全データの削除</h4>
 				<p>全データを削除します。</p>
-				<pre><code>localStorage.clear();</code></pre>
+				<pre><code>localStorage<b>.clear()</b>;</code></pre>
 				<p>簡単なデータ保存サンプルです。</p>
 				<pre><code>&lt;h1&gt;データ保存&lt;/h1&gt;
 &lt;p&gt;キー：&lt;input type="text" id="input1"&gt;&lt;/p&gt;	

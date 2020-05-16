@@ -19,7 +19,7 @@
 				<h3>1.HTMLからHTML5</h3>
 				<p>ところで、「HTML」という言葉は聞いたことがありますか？</p>
 				<p class=s>はい。ホームページを作る言語ですね。こんな「タグ」という記号でテキストをサンドイッチしていました。</p>
-				<pre><code>&lt;p&gt;こんにちは&lt;/p&gt;</code></pre>
+				<pre><code><b>&lt;p&gt;</b>こんにちは<b>&lt;/p&gt;</b></code></pre>
 
 				<p>そうですね、「HTML」は「Hypertext Markup Language」の略です。</p>
 				<ul>
@@ -67,8 +67,8 @@
 
 				<h3>4.「要素」と「タグ」</h3>
 				<p>「タグ」という言葉がでてきましたね。「pタグ」とか「h1タグ」など、マークアップするための記号で、それぞれ「&lt;p&gt;」「&lt;h1&gt;」と記述します。</p>
-				<pre><code>&lt;h1&gt;見出し&lt;/h1&gt;
-&lt;p&gt;文章&lt;/p&gt;</code></pre>
+				<pre><code><b>&lt;h1&gt;</b>見出し<b>&lt;/h1&gt;</b>
+<b>&lt;p&gt;</b>文章<b>&lt;/p&gt;</b></code></pre>
 				<p>最初のタグを開始タグ、最後の「/」のついたタグを終了タグといいます。</p>
 				<p>私達は「＜開始タグ＞本文＜/終了タグ＞」をまとめて「要素」と呼びます。</p>
 				<p>pタグで囲んだ部分を「p要素」、h1要素で囲んだ部分を「h1要素」というふうにです。これからは「要素」という言葉を用いることにします。また英語で「Element」と言います。ちなみに「Element」は科学では「元素」になります。「要素」はページを構成する最小単位のパーツです。とても重要ですので覚えてください。</p>
@@ -142,7 +142,7 @@
 				<h3>1.識別名 id属性</h3>
 				<p>まず①からです。書換えたいp要素はscript部屋の外にいます。ひとつだけではないかもしれませんから名前を付けましょう。「id」をつけます。</p>
 				<pre><code>&lt;body&gt;
-	&lt;p id="output1"&gt;おはようございます。&lt;/p&gt;
+	&lt;p <b>id="output1"</b>&gt;おはようございます。&lt;/p&gt;
 	︙
 &lt;/body&gt;</code></pre>
 				<p class=s>あ！「id」はわかります。JavaScriptで扱うためのid属性ですね。このp要素の識別名、つまり名前が「output1」ということですね。</p>
@@ -156,7 +156,7 @@
 				<p class=s>妖精さんなんですね。（意外にメルヘンチックな先生（笑）でもわかりやすい。）</p>
 				<p>例えば、document君に「きょうはいい天気です」って書いて(.write)もらいたければ、次のように書きます。</p>
 				<pre><code>&lt;script&gt;
-	document.write("きょうはいい天気です");
+	<b>document.write("きょうはいい天気です");</b>
 &lt;/script&gt;</code></pre>
 				<p class=s>先生！表示されました！</p>
 				<hr>
@@ -164,7 +164,7 @@
 				<h3>3.要素の取得</h3>
 				<p>では、このdocument君にお願いしましょう。「idがoutput1の要素をゲットしてきてください」と。</p>
 				<pre><code>&lt;script&gt;
-	document.getElementById("output1");
+	<b>document.getElementById("output1");</b>
 &lt;/script&gt;</code></pre>
 				<p class=s>できましたけど、大文字がところどころに入ってますね。</p>
 				<p>本来、get element by id("output1") と空白で分けますが、プログラムではできないので、空白は削除して、２つ目以降の単語の先頭を大文字にすることに注意してください。</p>
@@ -175,7 +175,7 @@
 				<h3>4.箱に入れる</h3>
 				<p>では、取得したものを、ラベルを付けた箱に入れましょう。</p>
 				<pre><code>&lt;script&gt;
-	const output1 = document.getElementById("output1");
+	<b>const output1 = document.getElementById("output1");</b>
 &lt;/script&gt;</code></pre>
 				<p>取得した要素を、output1という箱に入れています。</p>
 				<p>ラベルは何でもいいのですが、script部屋の外でのid属性の値が「output1」だったので、今回はscript部屋の中でもoutput1と呼びたいので「output1」にしました。</p>
@@ -188,7 +188,7 @@
 				<p>次に、output1の内側のコンテンツ部分に「こんにちは。」という文字を代入しましょう。その要素の内側のコンテンツ部分は「.innerHTML」と書きます。</p>
 				<pre><code>&lt;script&gt;
 	const output1 = document.getElementById("output1");
-	output1.innerHTML = "こんにちは。";
+	<b>output1.innerHTML = "こんにちは。";</b>
 &lt;/script&gt;</code></pre>
 				<p class=s>先生！できました。</p>
 				<p>よかったです。試しに、ブラウザから、ソースを表示させてみてください。</p>

@@ -25,29 +25,29 @@
 
 	let a = 1;
 	let b = 3;
-	let c = a+b;
+	let c = <b>a+b</b>;
 	output1.innerHTML = c;
 &lt;/script&gt;</code></pre>
 				<hr>
 
 				<h3>2.引き算</h3>
 				<p>これも大丈夫でしょう。</p>
-				<pre><code>	let c = a-b;</code></pre>
+				<pre><code>	let c = <b>a-b</b>;</code></pre>
 				<hr>
 
 				<h3>3.掛け算</h3>
 				<p>✕の記号はないのでアスタリスク「*」を用います。</p>
-				<pre><code>	let c = a*b;</code></pre>
+				<pre><code>	let c = <b>a*b</b>;</code></pre>
 				<hr>
 
 				<h3>4.割り算</h3>
 				<p>÷の記号はないのでスラッシュ「/」を用います。</p>
-				<pre><code>	let c = a/b;</code></pre>
+				<pre><code>	let c = <b>a/b</b>;</code></pre>
 				<hr>
 
 				<h3>5.余り算</h3>
 				<p>割った商の余りを知ることができます。「%」の記号を使います。</p>
-				<pre><code>	let c = a%b;</code></pre>
+				<pre><code>	let c = <b>a%b</b>;</code></pre>
 				<hr>
 
 				<h3>6.文字列の連結</h3>
@@ -57,9 +57,9 @@
 &lt;script&gt;
 	const output1 = document.getElementById("output1");
 
-	let a = "なかしまぁ";
-	let b = "先生";
-	let c = a+b;
+	<b>let a = "なかしまぁ";</b>
+	<b>let b = "先生";</b>
+	let c = <b>a+b</b>;
 	output1.innerHTML = c;
 &lt;/script&gt;</code></pre>
 				<p class=s>あれ、変数に文字が代入されてる。「なかしまぁ先生」となるのかな？</p>
@@ -83,11 +83,11 @@
 	function btn1(){
 		let n2 = Number(input1.value);
 
-		if(n1 === n2){
+		<b>if(n1 === n2){</b>
 			output1.innerHTML = "正解";
-		}else{
+		<b>}else{</b>
 			output1.innerHTML = "残念";
-		}
+		<b>}</b>
 	}
 &lt;/script&gt;</code></pre>
 				<p class=s>先生、Number()ってなんですか？</p>
@@ -104,30 +104,30 @@
 
 				<h4>切り捨て</h4>
 				<p>3.14をMathが切り捨てます。</p>
-				<pre><code>let a = Math.floor(3.14);</code></pre>
+				<pre><code>let a = <b>Math.floor(3.14)</b>;</code></pre>
 
 				<h4>四捨五入</h4>
 				<p>3.14をMathが四捨五入します。</p>
-				<pre><code>let a = Math.round(3.14);</code></pre> 
+				<pre><code>let a = <b>Math.round(3.14)</b>;</code></pre> 
 
 				<h4>切り上げ</h4>
 				<p>3.14をMathが切り上げます。</p>
-				<pre><code>let a = Math.ceil(3.14);</code></pre>
+				<pre><code>let a = <b>Math.ceil(3.14)</b>;</code></pre>
 
 				<h4>累乗</h4>
 				<p>2の3乗はこのように計算します。powはpowerです。</p>
 				<p>ちなみにMath.pow(2, 1/2 )は √2 になります。</p>
-				<pre><code>let a = Math.pow(2,3);</code></pre>
+				<pre><code>let a = <b>Math.pow(2,3)</b>;</code></pre>
 
 				<h4>円周率</h4>
 				<p>JavaScriptでは角度の計算で円周率がよく出てきます。値を変えたくないのでconstを使いました。</p>
-				<pre><code>const pi = Math.PI;</code></pre>
+				<pre><code>const pi = <b>Math.PI</b>;</code></pre>
 
 				<h4>乱数</h4>
 				<p>0以上、1未満の小数を含んだ乱数を得ます。</p>
-				<pre><code>let rand = Math.random();</code></pre>
+				<pre><code>let rand = <b>Math.random()</b>;</code></pre>
 				<p>もし、0,1,2の整数値が欲しい場合はこのようにします。</p>
-				<pre><code>let rand = Math.floor( Math.random()*3 );</code></pre>
+				<pre><code>let rand = <b>Math.floor( Math.random()*3 )</b>;</code></pre>
 				<p>これを先の数当てゲームに応用してみてください。</p>
 				<p class=s>おおお！数当てゲームががぜん難しくなってきた！正解の値もわからない。。。。</p>
 			</section>

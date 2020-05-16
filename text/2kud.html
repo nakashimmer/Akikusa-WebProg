@@ -21,7 +21,7 @@
 				<p>なにかをコントロールしたいのだけど、なにでコントロールしましょうか？</p>
 				<p class=s>マウスとか、指でタッチとか、それからボタンとか・・・</p>
 				<p>はい。きょうはボタンを使いましょう。次の行をp要素の上に書き足してください。</p>
-				<pre><code>&lt;p&gt;&lt;button onclick="btn1();"&gt;押す&lt;/button&gt;&lt;/p&gt;</code></pre>
+				<pre><code>&lt;p&gt;&lt;button <b>onclick="btn1();"</b>&gt;押す&lt;/button&gt;&lt;/p&gt;</code></pre>
 				<p class=s>ボタンて綴はブットンなんですね。それからonclick属性がありますね。</p>
 				<p>はい、onclick属性はクリックしたら"〜"をさせるものです。ここではbtn1()というプログラムを実行させようとしています。</p>
 				<hr>
@@ -49,15 +49,15 @@
 				<p>レシピだけではクッキーはできませんね。作ってとお願いしなければなりません。関数では次のように書きます。これを関数の実行といいます。</p>
 				<pre><code>関数名();</code></pre>
 				<p>ここで、onclick属性ではbtn1();と書いていましたね。あれがまさに関数の実行です。であれば、関数の定義は「書き変えること」ですから、全体は次のようになります。</p>
-				<pre><code>&lt;p&gt;&lt;button onclick="btn1();"&gt;押す&lt;/button&gt;&lt;/p&gt;
+				<pre><code>&lt;p&gt;&lt;button <b>onclick="btn1();"</b>&gt;押す&lt;/button&gt;&lt;/p&gt;
 &lt;p id="output1"&gt;おはようございます。&lt;/p&gt;
 
 &lt;script&gt;
 	const output1 = document.getElementById("output1");
 
-	function btn1(){
+	<b>function btn1(){
 		output1.innerHTML = "こんにちは。";
-	}
+	}</b>
 &lt;/script&gt;</code></pre>
 				<p class=s>先生できました！</p>
 				<p>これで私達は、JavaScriptをコントロールできるようになりました。</p>
