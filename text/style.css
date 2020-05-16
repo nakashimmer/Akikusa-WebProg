@@ -24,10 +24,16 @@ pre{
 	word-wrap: break-word;
 	overflow: auto;
 }
-code{font-family:menlo;tab-size:2;font-style: italic;}
+code{
+	tab-size:2;
+}
+code,code *{
+	font-family: "Menlo", "Courier", monospace;
+	font-style: italic;
+}
 p,li{line-height: 1.5em;margin:0.5em;}
 ol,ul{margin-left:2em;}
-.s:before{content:"👩‍🦰 ";font-size:1.5em}
+.s:before{content:"👩‍🦰 ";font-size:2em;}
 .s{font-weight: bold;margin:1em;text-indent:-0.5em;}
 ol.no{list-style-type: none;}
 audio{
