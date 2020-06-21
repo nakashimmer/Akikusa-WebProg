@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>14-2</title>
+	<style>
+		#canvas1 {
+			border: 1px solid gray;
+			display: block;
+			margin: 10px auto;
+		}
+	</style>
+</head>
+
+<body>
+	<canvas id="canvas1" width="300" height="300"></canvas>
+
+	<script>
+		const CANVAS1 = document.getElementById("canvas1");
+		const CTX = CANVAS1.getContext("2d");
+		//ここに描画のソースを記述
+
+		//矩形
+		CTX.fillStyle = "red";										//色の設定
+		CTX.fillRect(10, 10, 130, 130);						//矩形を描画
+
+		//三角形
+		CTX.beginPath();														//パスを開始
+		CTX.moveTo(225, 10);												//開始点(150,50)
+		CTX.lineTo(160, 140);											//次の頂点まで直線で結ぶ
+		CTX.lineTo(290, 140);											//次の頂点まで直線で結ぶ
+		CTX.closePath();														//パスを閉じる
+		CTX.fillStyle = "green";
+		CTX.fill();																		//塗りつぶす
+
+		//直線
+		CTX.beginPath();
+		CTX.moveTo(75, 160);
+		CTX.lineTo(10, 290);
+		CTX.lineTo(140, 290);
+		CTX.lineWidth = 5;													//先の太さ
+		CTX.strokeStyle = "blue";								//線の色
+		CTX.stroke();																//線を引く
+
+		//円弧
+		CTX.beginPath();														//パスの開始
+		CTX.moveTo(225, 225);											//円弧の中心から描画を開始
+		CTX.arc(
+			225, 225, 65,																	//円弧の中心座標(150,150)と半径(100)
+			0 / 100 * 2 * Math.PI,													//開始角度のラジアンを計算
+			60 / 100 * 2 * Math.PI,												//終了角度のラジアンを計算
+			false																					//時計回り
+		);
+		CTX.closePath();														//パスを終了して開始点に戻る
+		CTX.fillStyle = "pink";									//色の指定
+		CTX.fill();																		//塗りつぶし
+
+		//文字
+		CTX.font = "50px serif";									//フォントの指定
+		CTX.fillStyle = "gray";
+		CTX.fillText("HTML5", 50, 175);					//文字を表示する 
+
+	</script>
+</body>
+
+</html>

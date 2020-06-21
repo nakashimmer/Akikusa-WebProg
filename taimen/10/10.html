@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>10</title>
+</head>
+
+<body>
+	<p>
+		<button onclick="btn(1);" id="gu">ぐー</button>
+		<button onclick="btn(2);" id="chi">ちょき</button>
+		<button onclick="btn(3);" id="pa">ぱー</button>
+	</p>
+
+	<div id="output1">じゃんけん！</div>
+
+	<script>
+		const OUTPUT1 = document.getElementById("output1");
+
+		//得点
+		let point = 0;
+
+		function btn(n) {
+			let player;
+			//プレイヤーの手
+			if (n === 1) { player = "グー"; }
+			if (n === 2) { player = "チョキ"; }
+			if (n === 3) { player = "パー"; }
+
+			//PCの手
+			let pc = Math.floor(Math.random() * 3);
+			if (pc === 0) { pc = "グー"; }
+			if (pc === 1) { pc = "チョキ"; }
+			if (pc === 2) { pc = "パー"; }
+
+			//判定
+			let jadge;
+			if (player === pc) { judge = "あいこ"; }
+
+			if (pc === "グー" && player === "チョキ") { judge = "負け"; point--; }
+			if (pc === "グー" && player === "パー") { judge = "勝ち"; point++; }
+
+			if (pc === "チョキ" && player === "パー") { judge = "負け"; point--; }
+			if (pc === "チョキ" && player === "グー") { judge = "勝ち"; point++; }
+
+			if (pc === "パー" && player === "グー") { judge = "負け"; point--; }
+			if (pc === "パー" && player === "チョキ") { judge = "勝ち"; point++; }
+
+			//ページに表示
+			OUTPUT1.innerHTML = "<p>PCは" + pc + "</p>" + "<p>あなたは" + player + "</p>"		+ "<p>" + judge + "</p>" + "<p>得点" + point + "</p>";
+		}
+	</script>
+</body>
+
+</html>

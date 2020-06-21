@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>8</title>
+</head>
+
+<body>
+	<h1>計算機</h1>
+	<p>n1:<input id="input1" type="text"></p>
+	<p>n2:<input id="input2" type="text"></p>
+
+	<p>
+		<button onclick="btn1();">＋</button>
+		<button onclick="btn2();">−</button>
+		<button onclick="btn3();">×</button>
+		<button onclick="btn4();">÷</button>
+	</p>
+
+	<p id="output1">結果を表示</p>
+
+	<script>
+		const INPUT1 = document.getElementById("input1");
+		const INPUT2 = document.getElementById("input2");
+		const OUTPUT1 = document.getElementById("output1");
+
+		function btn1() {
+			let n1 = Number(INPUT1.value);
+			let n2 = Number(INPUT2.value);
+			OUTPUT1.innerHTML = n1 + n2;
+		}
+		function btn2() {
+			let n1 = Number(INPUT1.value);
+			let n2 = Number(INPUT2.value);
+			OUTPUT1.innerHTML = n1 - n2;
+		}
+		function btn3() {
+			let n1 = Number(INPUT1.value);
+			let n2 = Number(INPUT2.value);
+			OUTPUT1.innerHTML = n1 * n2;
+		}
+		function btn4() {
+			let n1 = Number(INPUT1.value);
+			let n2 = Number(INPUT2.value);
+			OUTPUT1.innerHTML = n1 / n2;
+		}
+	</script>
+</body>
+
+</html>

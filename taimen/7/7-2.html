@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>7-2</title>
+</head>
+
+<body>
+	<p>
+		<input type="text" id="input1">
+		<button onclick="btn1();">チャレンジ</button>
+	</p>
+	<p id="output1">結果</p>
+
+	<script>
+		const INPUT1 = document.getElementById("input1");
+		const OUTPUT1 = document.getElementById("output1");
+		let r1 = Math.floor(Math.random() * 10);
+
+		function btn1() {
+			let n1 = Number(INPUT1.value);
+
+			if (n1 === r1) { OUTPUT1.innerHTML = "正解"; }
+			if (n1 < r1) { OUTPUT1.innerHTML = "低い"; }
+			if (r1 < n1) { OUTPUT1.innerHTML = "高い"; }
+		}
+
+	</script>
+</body>
+
+</html>

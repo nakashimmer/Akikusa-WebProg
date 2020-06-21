@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>9-3</title>
+</head>
+
+<body>
+	<p>
+		<button onclick="start1();">Start</button>
+		<button onclick="finish1();">Finish</button>
+	</p>
+	<p id="output1">経過時間は...</p>
+
+	<script>
+		const OUTPUT1 = document.getElementById("output1");
+		let startTime;
+
+		function start1() {
+			const NOW = new Date();
+			startTime = NOW.getTime();
+		}
+
+		function finish1() {
+			const NOW = new Date();
+			let finishTime = NOW.getTime();
+			OUTPUT1.innerHTML = "経過時間は" + (finishTime - startTime) + "ミリ秒";
+		}
+
+	</script>
+</body>
+
+</html>

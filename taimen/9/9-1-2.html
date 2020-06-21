@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>9-1-1</title>
+</head>
+
+<body>
+	<p id="output1">日付情報</p>
+
+	<script>
+		const OUTPUT1 = document.getElementById("output1");
+		const now = new Date();
+		let y = now.getFullYear();
+		let m = now.getMonth() + 1;
+		let d = now.getDate();
+		let h = now.getHours();
+		let i = now.getMinutes();
+		let s = now.getSeconds();
+
+		OUTPUT1.innerHTML = y + "年" + m + "月" + d + "日" + h + "時" + i + "分" + s + "秒";
+	</script>
+</body>
+
+</html>
