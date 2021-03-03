@@ -14,16 +14,16 @@
 	<p id="output1">結果</p>
 
 	<script>
-		const INPUT1 = document.getElementById("input1");
-		const OUTPUT1 = document.getElementById("output1");
+		const input1 = document.getElementById("input1");
+		const output1 = document.getElementById("output1");
 		let r1 = Math.floor(Math.random() * 10);
 
 		function btn1() {
-			let n1 = Number(INPUT1.value);
+			let n1 = Number(input1.value);
 
-			if (n1 === r1) { OUTPUT1.innerHTML = "正解"; }
-			if (n1 < r1) { OUTPUT1.innerHTML = "低い"; }
-			if (r1 < n1) { OUTPUT1.innerHTML = "高い"; }
+			if (n1 === r1) { output1.innerHTML = "正解"; }
+			if (n1 < r1) { output1.innerHTML = "低い"; }
+			if (r1 < n1) { output1.innerHTML = "高い"; }
 		}
 
 	</script>

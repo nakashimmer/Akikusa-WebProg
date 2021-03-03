@@ -10,7 +10,7 @@
 	<p id="output1">日付情報</p>
 
 	<script>
-		const OUTPUT1 = document.getElementById("output1");
+		const output1 = document.getElementById("output1");
 		const now = new Date();
 		let y = now.getFullYear();
 		let m = now.getMonth() + 1;
@@ -19,7 +19,7 @@
 		let i = now.getMinutes();
 		let s = now.getSeconds();
 
-		OUTPUT1.innerHTML = y + "年" + m + "月" + d + "日" + h + "時" + i + "分" + s + "秒";
+		output1.innerHTML = y + "年" + m + "月" + d + "日" + h + "時" + i + "分" + s + "秒";
 	</script>
 </body>
 

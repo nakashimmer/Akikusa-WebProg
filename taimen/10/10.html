@@ -16,7 +16,7 @@
 	<div id="output1">じゃんけん！</div>
 
 	<script>
-		const OUTPUT1 = document.getElementById("output1");
+		const output1 = document.getElementById("output1");
 
 		//得点
 		let point = 0;
@@ -48,7 +48,7 @@
 			if (pc === "パー" && player === "チョキ") { judge = "勝ち"; point++; }
 
 			//ページに表示
-			OUTPUT1.innerHTML = "<p>PCは" + pc + "</p>" + "<p>あなたは" + player + "</p>"		+ "<p>" + judge + "</p>" + "<p>得点" + point + "</p>";
+			output1.innerHTML = "<p>PCは" + pc + "</p>" + "<p>あなたは" + player + "</p>"		+ "<p>" + judge + "</p>" + "<p>得点" + point + "</p>";
 		}
 	</script>
 </body>

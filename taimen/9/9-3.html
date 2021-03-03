@@ -14,7 +14,7 @@
 	<p id="output1">経過時間は...</p>
 
 	<script>
-		const OUTPUT1 = document.getElementById("output1");
+		const output1 = document.getElementById("output1");
 		let startTime;
 
 		function start1() {
@@ -25,7 +25,7 @@
 		function finish1() {
 			const NOW = new Date();
 			let finishTime = NOW.getTime();
-			OUTPUT1.innerHTML = "経過時間は" + (finishTime - startTime) + "ミリ秒";
+			output1.innerHTML = "経過時間は" + (finishTime - startTime) + "ミリ秒";
 		}
 
 	</script>

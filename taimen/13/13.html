@@ -27,13 +27,13 @@
 	<div id="box1"></div>
 
 	<script>
-		const BOX1 = document.getElementById("box1");
+		const box1 = document.getElementById("box1");
 
-		BOX1.addEventListener("mousemove", mydraw);
+		box1.addEventListener("mousemove", mydraw);
 
 		function mydraw(e) {
-			BOX1.style.left = (e.clientX - 10) + "px";
-			BOX1.style.top = (e.clientY - 10) + "px";
+			box1.style.left = (e.clientX - 10) + "px";
+			box1.style.top = (e.clientY - 10) + "px";
 		}
 	</script>
 </body>
