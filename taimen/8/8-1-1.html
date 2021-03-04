@@ -48,8 +48,8 @@
 		</header>
 
 		<main>
-			<p><button onclick="btn1();">ボタン１</button></p>
-			<p id="output1">ここの部分が書き換えられます</p>
+			<h2>日付情報のサンプル</h2>
+			<p id="output1">日付情報</p>
 		</main>
 
 		<footer>
@@ -59,10 +59,8 @@
 	</div>
 	<script>
 		const output1 = document.getElementById("output1");
-		
-		function btn1() {
-			output1.innerHTML = "書き換えました！";
-		}
+		const now = new Date();
+		output1.innerHTML = now;
 	</script>
 </body>
 

@@ -48,8 +48,18 @@
 		</header>
 
 		<main>
-			<p><button onclick="btn1();">ボタン１</button></p>
-			<p id="output1">ここの部分が書き換えられます</p>
+			<h2>オーディオのサンプル</h2>
+			<p><audio id="audio1" src="audio.mp3"></audio></p>
+			
+			<p>
+				<button onclick="audio1.play();">再生</button>
+				<button onclick="audio1.pause();">停止</button>
+				<button onclick="audio1.currentTime=0;audio.play();">最初から</button>
+				<button onclick="audio1.volume -= 0.2;">音を小さく</button>
+				<button onclick="audio1.volume += 0.2;">音を大きく</button>
+				<button onclick="audio1.playbackRate += 0.5;">早く</button>
+				<button onclick="audio1.playbackRate -= 0.5;">ゆっくり</button>
+			</p>
 		</main>
 
 		<footer>
@@ -58,11 +68,7 @@
 
 	</div>
 	<script>
-		const output1 = document.getElementById("output1");
-		
-		function btn1() {
-			output1.innerHTML = "書き換えました！";
-		}
+		const audio1 = document.getElementById("audio1");
 	</script>
 </body>
 

@@ -48,8 +48,18 @@
 		</header>
 
 		<main>
-			<p><button onclick="btn1();">ボタン１</button></p>
-			<p id="output1">ここの部分が書き換えられます</p>
+			<h2>ビデオのサンプル</h2>
+			<video id="video1" src="video.mp4"></video>
+			
+			<p>
+				<button onclick="video1.play();">再生</button>
+				<button onclick="video1.pause();">一旦停止 </button>
+				<button onclick="video1.currentTime=0;video.play();">最初から</button>
+				<button onclick="video1.volume -= 0.2;">音を小さく</button>
+				<button onclick="video1.volume += 0.2;">音を大きく</button>
+				<button onclick="video1.playbackRate += 0.5;">早く</button>
+				<button onclick="video1.playbackRate -= 0.5;">ゆっくり</button>
+			</p>
 		</main>
 
 		<footer>
@@ -58,11 +68,7 @@
 
 	</div>
 	<script>
-		const output1 = document.getElementById("output1");
-		
-		function btn1() {
-			output1.innerHTML = "書き換えました！";
-		}
+		const video1 = document.getElementById("video1");
 	</script>
 </body>
 

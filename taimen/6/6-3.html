@@ -48,8 +48,9 @@
 		</header>
 
 		<main>
-			<p><button onclick="btn1();">ボタン１</button></p>
-			<p id="output1">ここの部分が書き換えられます</p>
+			<input type="text" id="input1">
+			<button onclick="btn1();">ボタン１</button>
+			<p id="output1">結果</p>
 		</main>
 
 		<footer>
@@ -58,10 +59,18 @@
 
 	</div>
 	<script>
+		const input1 = document.getElementById("input1");
 		const output1 = document.getElementById("output1");
-		
+
+		let n1 = 50;
+
 		function btn1() {
-			output1.innerHTML = "書き換えました！";
+			n1 = Number(n1);
+			if (input1.value === n1) {
+				output1.innerHTML = "正解";
+			} else {
+				output1.innerHTML = "残念";
+			}
 		}
 	</script>
 </body>

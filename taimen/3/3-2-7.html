@@ -16,7 +16,8 @@
 		footer small{font-size:0.8em;}
 
 		/*3.背景色*/
-		header,footer{background-color:black; color:white;}
+		header{background-color:gray;}
+		footer{background-color:black; color:white;}
 
 		/*4.文字の左右揃え*/
 		h1,footer{text-align:center;}
@@ -48,8 +49,8 @@
 		</header>
 
 		<main>
-			<p><button onclick="btn1();">ボタン１</button></p>
-			<p id="output1">ここの部分が書き換えられます</p>
+			<h2>タイトルのサンプル</h2>
+			<p>アプリケーション</p>
 		</main>
 
 		<footer>
@@ -58,11 +59,6 @@
 
 	</div>
 	<script>
-		const output1 = document.getElementById("output1");
-		
-		function btn1() {
-			output1.innerHTML = "書き換えました！";
-		}
 	</script>
 </body>
 

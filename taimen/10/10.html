@@ -3,52 +3,89 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>10</title>
+	<title>CSSの演習</title>
+	<style>
+		/*1.リセットCSS*/
+		*{
+			margin:0px;padding:0px;
+			font-size:32px;
+		}
+
+		/*2.文字の大きさの調整*/
+		header h1{font-size:1.2em;}
+		footer small{font-size:0.8em;}
+
+		/*3.背景色*/
+		header,footer{background-color:black; color:white;}
+
+		/*4.文字の左右揃え*/
+		h1,footer{text-align:center;}
+
+		/*5.上下揃え*/
+		#wrap{
+			display:flex;
+			flex-direction:column;
+			height:100vh;
+		}
+		main{
+			flex:1;
+			background-color:#eee;
+			width:90%;
+			margin:50px auto;
+			border:1px solid gray;
+		}
+
+
+	</style>
 </head>
 
 <body>
-	<p>
-		<button onclick="btn(1);" id="gu">ぐー</button>
-		<button onclick="btn(2);" id="chi">ちょき</button>
-		<button onclick="btn(3);" id="pa">ぱー</button>
-	</p>
+	<div id="wrap">
 
-	<div id="output1">じゃんけん！</div>
+		<header>
+			<h1>CSSの演習</h1>
+		</header>
 
+		<main>
+			<h2>じゃんけんアプリのサンプル</h2>
+			<p>
+				<button onclick='janken("グー")' id="gu">ぐー</button>
+				<button onclick='janken("チョキ")' id="choki">ちょき</button>
+				<button onclick='janken("パー")' id="pa">ぱー</button>
+			</p>
+			<p id="output">じゃんけん・・・</p>
+		</main>
+
+		<footer>
+			<p><small>(C)akikusa.</small></p>
+		</footer>
+
+	</div>
 	<script>
-		const output1 = document.getElementById("output1");
-
-		//得点
-		let point = 0;
-
-		function btn(n) {
-			let player;
-			//プレイヤーの手
-			if (n === 1) { player = "グー"; }
-			if (n === 2) { player = "チョキ"; }
-			if (n === 3) { player = "パー"; }
-
+		//初期値
+		let point = 0; let judge;
+		function janken(player) {
+			judge = "あいこ";
 			//PCの手
 			let pc = Math.floor(Math.random() * 3);
 			if (pc === 0) { pc = "グー"; }
 			if (pc === 1) { pc = "チョキ"; }
 			if (pc === 2) { pc = "パー"; }
-
 			//判定
-			let jadge;
-			if (player === pc) { judge = "あいこ"; }
-
-			if (pc === "グー" && player === "チョキ") { judge = "負け"; point--; }
-			if (pc === "グー" && player === "パー") { judge = "勝ち"; point++; }
-
-			if (pc === "チョキ" && player === "パー") { judge = "負け"; point--; }
-			if (pc === "チョキ" && player === "グー") { judge = "勝ち"; point++; }
-
-			if (pc === "パー" && player === "グー") { judge = "負け"; point--; }
-			if (pc === "パー" && player === "チョキ") { judge = "勝ち"; point++; }
-
+			if (player === "グー") {
+				if (pc === "チョキ") { judge = "勝ち"; point++; }
+				if (pc === "パー") { judge = "負け"; point--; }
+			}
+			if (player === "チョキ") {
+				if (pc === "グー") { judge = "負け"; point--; }
+				if (pc === "パー") { judge = "勝ち"; point++; }
+			}
+			if (player === "パー") {
+				if (pc === "グー") { judge = "勝ち"; point++; }
+				if (pc === "チョキ") { judge = "負け"; point--; }
+			}
 			//ページに表示
-			output1.innerHTML = "<p>PCは" + pc + "</p>" + "<p>あなたは" + player + "</p>"		+ "<p>" + judge + "</p>" + "<p>得点" + point + "</p>";
+			output.innerHTML = "<p>PCは" + pc + "</p>" + "<p>あなたは" + player + "</p>" + "<p>" + judge + "</p>" + "<p>得点" + point + "</p>";
 		}
 	</script>
 </body>

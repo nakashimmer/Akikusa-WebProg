@@ -48,7 +48,6 @@
 		</header>
 
 		<main>
-			<p><button onclick="btn1();">ボタン１</button></p>
 			<p id="output1">ここの部分が書き換えられます</p>
 		</main>
 
@@ -60,9 +59,7 @@
 	<script>
 		const output1 = document.getElementById("output1");
 		
-		function btn1() {
-			output1.innerHTML = "書き換えました！";
-		}
+		output1.innerHTML = "書き換えました！";
 	</script>
 </body>
 

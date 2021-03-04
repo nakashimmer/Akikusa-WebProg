@@ -48,7 +48,14 @@
 		</header>
 
 		<main>
+			<p>入力：<input type="text" id="input1"></p>
+			<!--
+			<p>入力：<input type="range" id="input1"></p>
+			<p>入力：<input type="date" id="input1"></p>
+			<p>入力：<input type="color" id="input1"></p>
+			-->
 			<p><button onclick="btn1();">ボタン１</button></p>
+			
 			<p id="output1">ここの部分が書き換えられます</p>
 		</main>
 
@@ -58,10 +65,11 @@
 
 	</div>
 	<script>
+		const input1 = document.getElementById("input1");
 		const output1 = document.getElementById("output1");
 		
 		function btn1() {
-			output1.innerHTML = "書き換えました！";
+			output1.innerHTML = input1.value;
 		}
 	</script>
 </body>

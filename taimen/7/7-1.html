@@ -3,23 +3,80 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>7-1</title>
+	<title>CSSの演習</title>
+	<style>
+		/*1.リセットCSS*/
+		*{
+			margin:0px;padding:0px;
+			font-size:32px;
+		}
+
+		/*2.文字の大きさの調整*/
+		header h1{font-size:1.2em;}
+		footer small{font-size:0.8em;}
+
+		/*3.背景色*/
+		header,footer{background-color:black; color:white;}
+
+		/*4.文字の左右揃え*/
+		h1,footer{text-align:center;}
+
+		/*5.上下揃え*/
+		#wrap{
+			display:flex;
+			flex-direction:column;
+			height:100vh;
+		}
+		main{
+			flex:1;
+			background-color:#eee;
+			width:90%;
+			margin:50px auto;
+			border:1px solid gray;
+		}
+
+
+
+	</style>
 </head>
 
 <body>
-	<p>
-		<input type="text" id="input1">
-		<button onclick="btn1();">ボタン１</button>
-	</p>
-	<p id="output1">出力</p>
+	<div id="wrap">
 
+		<header>
+			<h1>CSSの演習</h1>
+		</header>
+
+		<main>
+			<h2>計算機のサンプル</h2>
+			<p>n1:<input id="input1" type="text"></p>
+			<p>n2:<input id="input2" type="text"></p>
+			
+			<p>
+				<button onclick="btn1();">＋</button>
+				<button onclick="btn2();">−</button>
+				<button onclick="btn3();">×</button>
+				<button onclick="btn4();">÷</button>
+			</p>
+			
+			<p id="output1">結果を表示</p>
+		</main>
+
+		<footer>
+			<p><small>(C)akikusa.</small></p>
+		</footer>
+
+	</div>
 	<script>
-		const input1 = document.getElementById("input1");
-		const output1 = document.getElementById("output1");
+			const input1 = document.getElementById("input1");
+			const input2 = document.getElementById("input2");
+			const output1 = document.getElementById("output1");
 
-		function btn1() {
-			output1.innerHTML = input1.value;
-		}
+			function btn1() { output1.innerHTML = Number(n1.value) + Number(n2.value); }
+			function btn2() { output1.innerHTML = Number(n1.value) - Number(n2.value); }
+			function btn3() { output1.innerHTML = Number(n1.value) * Number(n2.value); }
+			function btn4() { output1.innerHTML = Number(n1.value) / Number(n2.value); }
+
 	</script>
 </body>
 

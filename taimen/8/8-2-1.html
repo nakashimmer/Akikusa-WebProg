@@ -48,8 +48,8 @@
 		</header>
 
 		<main>
-			<p><button onclick="btn1();">ボタン１</button></p>
-			<p id="output1">ここの部分が書き換えられます</p>
+			<h2>日付情報のサンプル</h2>
+			<p id="output1">日付情報</p>
 		</main>
 
 		<footer>
@@ -58,11 +58,23 @@
 
 	</div>
 	<script>
-		const output1 = document.getElementById("output1");
-		
-		function btn1() {
-			output1.innerHTML = "書き換えました！";
-		}
+			const output1 = document.getElementById("output1");
+
+			setInterval(clock, 1000);
+
+			function clock() {
+				let now = new Date();
+				let y = now.getFullYear();
+				let m = now.getMonth() + 1;
+				let d = now.getDate();
+				let w = now.getDay();
+				let h = now.getHours();
+				let i = now.getMinutes();
+				let s = now.getSeconds();
+
+				let week = ["日", "月", "火", "水", "木", "金", "土"];
+				output1.innerHTML = y + "年" + m + "月" + d + "日" + week[w] + "曜日" + h + "時" + i + "分" + s + "秒";
+			}
 	</script>
 </body>
 

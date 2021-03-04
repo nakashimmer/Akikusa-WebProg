@@ -48,8 +48,8 @@
 		</header>
 
 		<main>
-			<p><button onclick="btn1();">ボタン１</button></p>
-			<p id="output1">ここの部分が書き換えられます</p>
+			<h2>占いのサンプル</h2>
+			<p>あなたのきょうの運勢は<span id="result"></span>です。</p>
 		</main>
 
 		<footer>
@@ -58,11 +58,14 @@
 
 	</div>
 	<script>
-		const output1 = document.getElementById("output1");
-		
-		function btn1() {
-			output1.innerHTML = "書き換えました！";
-		}
+		const result = document.getElementById("result");
+
+		let n = Math.floor(Math.random() * 3);
+
+		if (n === 0) { result.innerHTML  = "大吉"; }
+		if (n === 1) { result.innerHTML = "中吉"; }
+		if (n === 2) { result.innerHTML = "小吉"; }
+
 	</script>
 </body>
 

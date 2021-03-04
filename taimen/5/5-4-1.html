@@ -48,8 +48,7 @@
 		</header>
 
 		<main>
-			<p><button onclick="btn1();">ボタン１</button></p>
-			<p id="output1">ここの部分が書き換えられます</p>
+			<p id="output1">結果を表示します</p>
 		</main>
 
 		<footer>
@@ -60,9 +59,10 @@
 	<script>
 		const output1 = document.getElementById("output1");
 		
-		function btn1() {
-			output1.innerHTML = "書き換えました！";
-		}
+		let n1 = 5;
+		let n2 = 3;
+		let n3 = n1 + n2;
+		output1.innerHTML = n3;
 	</script>
 </body>
 

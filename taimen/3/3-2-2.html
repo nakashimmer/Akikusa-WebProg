@@ -14,29 +14,6 @@
 		/*2.文字の大きさの調整*/
 		header h1{font-size:1.2em;}
 		footer small{font-size:0.8em;}
-
-		/*3.背景色*/
-		header,footer{background-color:black; color:white;}
-
-		/*4.文字の左右揃え*/
-		h1,footer{text-align:center;}
-
-		/*5.上下揃え*/
-		#wrap{
-			display:flex;
-			flex-direction:column;
-			height:100vh;
-		}
-		main{
-			flex:1;
-			background-color:#eee;
-			width:90%;
-			margin:50px auto;
-			border:1px solid gray;
-		}
-
-
-
 	</style>
 </head>
 
@@ -48,7 +25,8 @@
 		</header>
 
 		<main>
-			<p id="output1">結果を表示します</p>
+			<h2>タイトルのサンプル</h2>
+			<p>アプリケーション</p>
 		</main>
 
 		<footer>
@@ -57,10 +35,6 @@
 
 	</div>
 	<script>
-		const output1 = document.getElementById("output1");
-		
-		let n1 = 5;
-		output1.innerHTML = n1;
 	</script>
 </body>
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>CSSの演習</title>
+	<style>
+		*{margin:0px;padding:0px;}
+		#canvas1{
+			border:1px solid gray;
+			display:block;
+			margin:10px auto;
+		}
+	</style>
+</head>
+
+<body>
+	<canvas id="canvas1" width="300" height="300"></canvas>
+	
+	<script>
+		const canvas1 = document.getElementById("canvas1");
+		const ctx = canvas1.getContext("2d");
+		//ここに描画のソースを記述
+
+		//矩形
+		ctx.fillStyle = "red";								//色の設定
+		ctx.fillRect(10, 10, 130, 130);						//矩形を描画
+
+		//三角形
+		ctx.beginPath();											//パスを開始
+		ctx.moveTo(225, 10);									//開始点(150,50)
+		ctx.lineTo(160, 140);									//次の頂点まで直線で結ぶ
+		ctx.lineTo(290, 140);									//次の頂点まで直線で結ぶ
+		ctx.closePath();											//パスを閉じる
+		ctx.fillStyle = "green";
+		ctx.fill();													//塗りつぶす
+
+		//直線
+		ctx.beginPath();
+		ctx.moveTo(75, 160);
+		ctx.lineTo(10, 290);
+		ctx.lineTo(140, 290);
+		ctx.lineWidth = 5;										//線の太さ
+		ctx.strokeStyle = "blue";							//線の色
+		ctx.stroke();												//線を引く
+	</script>
+</body>
+
+</html>

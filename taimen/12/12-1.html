@@ -48,8 +48,13 @@
 		</header>
 
 		<main>
-			<p><button onclick="btn1();">ボタン１</button></p>
-			<p id="output1">ここの部分が書き換えられます</p>
+			<h2>データ保存のサンプル</h2>
+			<p>key：<input id="input1" type="text"></p>
+			<p>value：<input id="input2" type="text"></p>
+			<p>
+				<button onclick="myset();">保存</button>
+				<button onclick="myget();">読出</button>
+			</p>
 		</main>
 
 		<footer>
@@ -58,11 +63,22 @@
 
 	</div>
 	<script>
-		const output1 = document.getElementById("output1");
-		
-		function btn1() {
-			output1.innerHTML = "書き換えました！";
+		const input1 = document.getElementById("input1");
+			const input1 = document.getElementById("input1");
+
+		function myset() {
+			localStorage.setItem(input1.value, input1.value);
 		}
+		function myget() {
+			input2.value = localStorage.getItem(input1.value);
+		}
+		function myrmv() {
+			localStorage.removeItem(input1.value);
+		}
+		function myclr() {
+			localStorage.clear();
+		}
+
 	</script>
 </body>
 
