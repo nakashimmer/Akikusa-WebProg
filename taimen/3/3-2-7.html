@@ -12,12 +12,11 @@
 		}
 
 		/*2.文字の大きさの調整*/
-		header h1{font-size:1.2em;}
-		footer small{font-size:0.8em;}
+		header h1{font-size:1.2em;line-height: 2em;}
+		footer small{font-size:0.8em;line-height:1em;}
 
 		/*3.背景色*/
-		header{background-color:gray;}
-		footer{background-color:black; color:white;}
+		header,footer{background-color:black; color:white;}
 
 		/*4.文字の左右揃え*/
 		h1,footer{text-align:center;}
@@ -33,11 +32,21 @@
 			background-color:#eee;
 			width:90%;
 			margin:50px auto;
+			padding:1em;
 			border:1px solid gray;
 		}
-
-
-
+		main>*{
+			margin:0.5em;
+		}
+		/*6.リッチなデザイン*/
+		main p{
+			border:1px solid gray;
+			width:300px;height:300px;
+			margin:30px auto;
+			box-shadow:10px 10px 10px gray;
+			border-radius:1em;
+			transform:rotate(-20deg);
+		}
 	</style>
 </head>
 

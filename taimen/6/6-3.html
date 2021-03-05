@@ -32,9 +32,12 @@
 			background-color:#eee;
 			width:90%;
 			margin:50px auto;
+			padding:1em;
 			border:1px solid gray;
 		}
-
+		main>*{
+			margin:0.5em;
+		}
 
 
 	</style>
@@ -65,8 +68,7 @@
 		let n1 = 50;
 
 		function btn1() {
-			n1 = Number(n1);
-			if (input1.value === n1) {
+			if (n1 === Number(input1.value)) {
 				output1.innerHTML = "正解";
 			} else {
 				output1.innerHTML = "残念";

@@ -32,9 +32,12 @@
 			background-color:#eee;
 			width:90%;
 			margin:50px auto;
+			padding:1em;
 			border:1px solid gray;
 		}
-
+		main>*{
+			margin:0.5em;
+		}
 
 
 	</style>
@@ -72,10 +75,10 @@
 			const input2 = document.getElementById("input2");
 			const output1 = document.getElementById("output1");
 
-			function btn1() { output1.innerHTML = Number(n1.value) + Number(n2.value); }
-			function btn2() { output1.innerHTML = Number(n1.value) - Number(n2.value); }
-			function btn3() { output1.innerHTML = Number(n1.value) * Number(n2.value); }
-			function btn4() { output1.innerHTML = Number(n1.value) / Number(n2.value); }
+			function btn1() { output1.innerHTML = Number(input1.value) + Number(input2.value); }
+			function btn2() { output1.innerHTML = Number(input1.value) - Number(input2.value); }
+			function btn3() { output1.innerHTML = Number(input1.value) * Number(input2.value); }
+			function btn4() { output1.innerHTML = Number(input1.value) / Number(input2.value); }
 
 	</script>
 </body>

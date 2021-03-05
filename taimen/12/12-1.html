@@ -32,7 +32,14 @@
 			background-color:#eee;
 			width:90%;
 			margin:50px auto;
+			padding:1em;
 			border:1px solid gray;
+		}
+		main>*{
+			margin:0.5em;
+		}		
+		main>*{
+			margin:0.5em;
 		}
 
 
@@ -52,8 +59,10 @@
 			<p>key：<input id="input1" type="text"></p>
 			<p>value：<input id="input2" type="text"></p>
 			<p>
-				<button onclick="myset();">保存</button>
-				<button onclick="myget();">読出</button>
+				<button onclick="btn1();">保存</button>
+				<button onclick="btn2();">読出</button>
+				<button onclick="btn3();">削除</button>
+				<button onclick="btn4();">全削除</button>
 			</p>
 		</main>
 
@@ -64,20 +73,21 @@
 	</div>
 	<script>
 		const input1 = document.getElementById("input1");
-			const input1 = document.getElementById("input1");
+		const input2 = document.getElementById("input2");
 
-		function myset() {
+		function btn1() {
 			localStorage.setItem(input1.value, input1.value);
 		}
-		function myget() {
+		function btn2() {
 			input2.value = localStorage.getItem(input1.value);
 		}
-		function myrmv() {
+		function btn3() {
 			localStorage.removeItem(input1.value);
 		}
-		function myclr() {
+		function btn4() {
 			localStorage.clear();
 		}
+
 
 	</script>
 </body>
