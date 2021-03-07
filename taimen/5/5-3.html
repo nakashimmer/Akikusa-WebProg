@@ -6,40 +6,53 @@
 	<title>5.3.変数</title>
 	<style>
 		/*1.リセットCSS*/
-		*{
-			margin:0px;padding:0px;
-			font-size:32px;
+		* {
+			margin: 0px;
+			padding: 0px;
+			font-size: 32px;
 		}
 
 		/*2.文字の大きさの調整*/
-		header h1{font-size:1.2em;}
-		footer small{font-size:0.8em;}
+		header h1 {
+			font-size: 1.2em;
+		}
+
+		footer small {
+			font-size: 0.8em;
+		}
 
 		/*3.背景色*/
-		header,footer{background-color:black; color:white;}
+		header,
+		footer {
+			background-color: black;
+			color: white;
+		}
 
 		/*4.文字の左右揃え*/
-		h1,footer{text-align:center;}
+		h1,
+		footer {
+			text-align: center;
+		}
 
 		/*5.上下揃え*/
-		#wrap{
-			display:flex;
-			flex-direction:column;
-			height:100vh;
-		}
-		main{
-			flex:1;
-			background-color:#eee;
-			width:90%;
-			margin:50px auto;
-			padding:1em;
-			border:1px solid gray;
-		}
-		main>*{
-			margin:0.5em;
+		#wrap {
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
 		}
 
+		main {
+			flex: 1;
+			background-color: #eee;
+			width: 90%;
+			margin: 50px auto;
+			padding: 1em;
+			border: 1px solid gray;
+		}
 
+		main>* {
+			margin: 0.5em;
+		}
 	</style>
 </head>
 
@@ -61,7 +74,7 @@
 	</div>
 	<script>
 		const output1 = document.getElementById("output1");
-		
+
 		let n1 = 5;
 		output1.innerHTML = n1;
 	</script>

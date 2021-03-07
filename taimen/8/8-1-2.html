@@ -6,40 +6,53 @@
 	<title>8.1.2.年・月・日・時・分・秒を取り出す</title>
 	<style>
 		/*1.リセットCSS*/
-		*{
-			margin:0px;padding:0px;
-			font-size:32px;
+		* {
+			margin: 0px;
+			padding: 0px;
+			font-size: 32px;
 		}
 
 		/*2.文字の大きさの調整*/
-		header h1{font-size:1.2em;}
-		footer small{font-size:0.8em;}
+		header h1 {
+			font-size: 1.2em;
+		}
+
+		footer small {
+			font-size: 0.8em;
+		}
 
 		/*3.背景色*/
-		header,footer{background-color:black; color:white;}
+		header,
+		footer {
+			background-color: black;
+			color: white;
+		}
 
 		/*4.文字の左右揃え*/
-		h1,footer{text-align:center;}
+		h1,
+		footer {
+			text-align: center;
+		}
 
 		/*5.上下揃え*/
-		#wrap{
-			display:flex;
-			flex-direction:column;
-			height:100vh;
-		}
-		main{
-			flex:1;
-			background-color:#eee;
-			width:90%;
-			margin:50px auto;
-			padding:1em;
-			border:1px solid gray;
-		}
-		main>*{
-			margin:0.5em;
+		#wrap {
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
 		}
 
+		main {
+			flex: 1;
+			background-color: #eee;
+			width: 90%;
+			margin: 50px auto;
+			padding: 1em;
+			border: 1px solid gray;
+		}
 
+		main>* {
+			margin: 0.5em;
+		}
 	</style>
 </head>
 
@@ -61,18 +74,18 @@
 
 	</div>
 	<script>
-			const output1 = document.getElementById("output1");
-			let now = new Date();
-			let y = now.getFullYear();
-			let m = now.getMonth() + 1;
-			let d = now.getDate();
-			let w = now.getDay();
-			let h = now.getHours();
-			let i = now.getMinutes();
-			let s = now.getSeconds();
+		const output1 = document.getElementById("output1");
+		let now = new Date();
+		let y = now.getFullYear();
+		let m = now.getMonth() + 1;
+		let d = now.getDate();
+		let w = now.getDay();
+		let h = now.getHours();
+		let i = now.getMinutes();
+		let s = now.getSeconds();
 
-			let week = ["日", "月", "火", "水", "木", "金", "土"];
-			output1.innerHTML = y + "年" + m + "月" + d + "日" + week[w] + "曜日" + h + "時" + i + "分" + s + "秒";
+		let week = ["日", "月", "火", "水", "木", "金", "土"];
+		output1.innerHTML = y + "年" + m + "月" + d + "日" + week[w] + "曜日" + h + "時" + i + "分" + s + "秒";
 	</script>
 </body>
 

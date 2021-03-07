@@ -5,32 +5,36 @@
 	<meta charset="utf-8">
 	<title>14.3.最後に</title>
 	<style>
-		*{margin:0px;padding:0px;}
-		#canvas1{
-			border:1px solid gray;
-			display:block;
-			margin:10px auto;
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		#canvas1 {
+			border: 1px solid gray;
+			display: block;
+			margin: 10px auto;
 		}
 	</style>
 </head>
 
 <body>
 	<canvas id="canvas1" width="300" height="300"></canvas>
-	
+
 	<script>
 		const canvas1 = document.getElementById("canvas1");
 		const ctx = canvas1.getContext("2d");
 		//ここに描画のソースを記述
 
 		//直線
-			ctx.beginPath();
-			ctx.moveTo(100, 125);
-			ctx.lineTo(150, 175);
-			ctx.lineTo(200, 125);
-			ctx.lineWidth = 120;
-			ctx.strokeStyle = "pink";
-			ctx.lineCap = "round";								//先端の形状
-			ctx.stroke();
+		ctx.beginPath();
+		ctx.moveTo(100, 125);
+		ctx.lineTo(150, 175);
+		ctx.lineTo(200, 125);
+		ctx.lineWidth = 120;
+		ctx.strokeStyle = "pink";
+		ctx.lineCap = "round";								//先端の形状
+		ctx.stroke();
 	</script>
 </body>
 
