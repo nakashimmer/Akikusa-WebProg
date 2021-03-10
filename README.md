@@ -1,2 +1,2 @@
 # AkikusaWebProg
-https://nakashimmer.github.io/AkikusaWebProg/
+https://nakashimmer.github.io/Akikusa-WebProg/
