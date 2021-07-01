@@ -1,108 +1,101 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8">
+		<title>12.データを保存する</title>
+		<style>
+			/*1.リセットCSS*/
+			* {
+				margin: 0px;
+				padding: 0px;
+				font-size: 32px;
+			}
 
-<head>
-	<meta charset="utf-8">
-	<title>12.データを保存する</title>
-	<style>
-		/*1.リセットCSS*/
-		* {
-			margin: 0px;
-			padding: 0px;
-			font-size: 32px;
-		}
+			/*2.文字の大きさの調整*/
+			header h1 {
+				font-size: 1.2em;
+			}
 
-		/*2.文字の大きさの調整*/
-		header h1 {
-			font-size: 1.2em;
-		}
+			footer small {
+				font-size: 0.8em;
+			}
 
-		footer small {
-			font-size: 0.8em;
-		}
+			/*3.背景色*/
+			header,
+			footer {
+				background-color: black;
+				color: white;
+			}
 
-		/*3.背景色*/
-		header,
-		footer {
-			background-color: black;
-			color: white;
-		}
+			/*4.文字の左右揃え*/
+			h1,
+			footer {
+				text-align: center;
+			}
 
-		/*4.文字の左右揃え*/
-		h1,
-		footer {
-			text-align: center;
-		}
+			/*5.上下揃え*/
+			#wrap {
+				display: flex;
+				flex-direction: column;
+				height: 100vh;
+			}
 
-		/*5.上下揃え*/
-		#wrap {
-			display: flex;
-			flex-direction: column;
-			height: 100vh;
-		}
+			main {
+				flex: 1;
+				background-color: #eee;
+				width: 90%;
+				margin: 50px auto;
+				padding: 1em;
+				border: 1px solid gray;
+			}
 
-		main {
-			flex: 1;
-			background-color: #eee;
-			width: 90%;
-			margin: 50px auto;
-			padding: 1em;
-			border: 1px solid gray;
-		}
+			main>* {
+				margin: 0.5em;
+			}
 
-		main>* {
-			margin: 0.5em;
-		}
+			main>* {
+				margin: 0.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<header>
+				<h1>12.データを保存する</h1>
+			</header>
+			<main>
+				<h2>データ保存のサンプル</h2>
+				<p>key：<input id="input1" type="text"></p>
+				<p>value：<input id="input2" type="text"></p>
+				<p>
+					<button onclick="btn1();">保存</button>
+					<button onclick="btn2();">読出</button>
+					<button onclick="btn3();">削除</button>
+					<button onclick="btn4();">全削除</button>
+				</p>
+			</main>
+			<footer>
+				<p><small>(C)akikusa.</small></p>
+			</footer>
+		</div>
+		<script>
+			const input1 = document.getElementById("input1");
+			const input2 = document.getElementById("input2");
 
-		main>* {
-			margin: 0.5em;
-		}
-	</style>
-</head>
-
-<body>
-	<div id="wrap">
-
-		<header>
-			<h1>12.データを保存する</h1>
-		</header>
-
-		<main>
-			<h2>データ保存のサンプル</h2>
-			<p>key：<input id="input1" type="text"></p>
-			<p>value：<input id="input2" type="text"></p>
-			<p>
-				<button onclick="btn1();">保存</button>
-				<button onclick="btn2();">読出</button>
-				<button onclick="btn3();">削除</button>
-				<button onclick="btn4();">全削除</button>
-			</p>
-		</main>
-
-		<footer>
-			<p><small>(C)akikusa.</small></p>
-		</footer>
-
-	</div>
-	<script>
-		const input1 = document.getElementById("input1");
-		const input2 = document.getElementById("input2");
-
-		function btn1() {
-			localStorage.setItem(input1.value, input1.value);
-		}
-		function btn2() {
-			input2.value = localStorage.getItem(input1.value);
-		}
-		function btn3() {
-			localStorage.removeItem(input1.value);
-		}
-		function btn4() {
-			localStorage.clear();
-		}
+			function btn1() {
+				localStorage.setItem(input1.value, input2.value);
+			}
+			function btn2() {
+				input2.value = localStorage.getItem(input1.value);
+			}
+			function btn3() {
+				localStorage.removeItem(input1.value);
+			}
+			function btn4() {
+				localStorage.clear();
+			}
 
 
-	</script>
-</body>
-
+		</script>
+	</body>
 </html>

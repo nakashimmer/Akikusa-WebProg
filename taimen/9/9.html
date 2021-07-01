@@ -1,88 +1,83 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8">
+		<title>9.占いアプリを作る</title>
+		<style>
+			/*1.リセットCSS*/
+			* {
+				margin: 0px;
+				padding: 0px;
+				font-size: 32px;
+			}
 
-<head>
-	<meta charset="utf-8">
-	<title>9.占いアプリを作る</title>
-	<style>
-		/*1.リセットCSS*/
-		* {
-			margin: 0px;
-			padding: 0px;
-			font-size: 32px;
-		}
+			/*2.文字の大きさの調整*/
+			header h1 {
+				font-size: 1.2em;
+			}
 
-		/*2.文字の大きさの調整*/
-		header h1 {
-			font-size: 1.2em;
-		}
+			footer small {
+				font-size: 0.8em;
+			}
 
-		footer small {
-			font-size: 0.8em;
-		}
+			/*3.背景色*/
+			header,
+			footer {
+				background-color: black;
+				color: white;
+			}
 
-		/*3.背景色*/
-		header,
-		footer {
-			background-color: black;
-			color: white;
-		}
+			/*4.文字の左右揃え*/
+			h1,
+			footer {
+				text-align: center;
+			}
 
-		/*4.文字の左右揃え*/
-		h1,
-		footer {
-			text-align: center;
-		}
+			/*5.上下揃え*/
+			#wrap {
+				display: flex;
+				flex-direction: column;
+				height: 100vh;
+			}
 
-		/*5.上下揃え*/
-		#wrap {
-			display: flex;
-			flex-direction: column;
-			height: 100vh;
-		}
+			main {
+				flex: 1;
+				background-color: #eee;
+				width: 90%;
+				margin: 50px auto;
+				padding: 1em;
+				border: 1px solid gray;
+			}
 
-		main {
-			flex: 1;
-			background-color: #eee;
-			width: 90%;
-			margin: 50px auto;
-			padding: 1em;
-			border: 1px solid gray;
-		}
+			main>* {
+				margin: 0.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<header>
+				<h1>9.占いアプリを作る</h1>
+			</header>
+			<main>
+				<h2>占いアプリのサンプル</h2>
+				<p>あなたのきょうの運勢は<span id="result">〇〇</span>です。</p>
+				<p><button onclick="btn1();">占う</button></p>
+			</main>
+			<footer>
+				<p><small>(C)akikusa.</small></p>
+			</footer>
+		</div>
+		<script>
+			const result = document.getElementById("result");
 
-		main>* {
-			margin: 0.5em;
-		}
-	</style>
-</head>
+			funtion(){
+				let n = Math.floor(Math.random() * 3);
 
-<body>
-	<div id="wrap">
-
-		<header>
-			<h1>9.占いアプリを作る</h1>
-		</header>
-
-		<main>
-			<h2>占いアプリのサンプル</h2>
-			<p>あなたのきょうの運勢は<span id="result"></span>です。</p>
-		</main>
-
-		<footer>
-			<p><small>(C)akikusa.</small></p>
-		</footer>
-
-	</div>
-	<script>
-		const result = document.getElementById("result");
-
-		let n = Math.floor(Math.random() * 3);
-
-		if (n === 0) { result.innerHTML = "大吉"; }
-		if (n === 1) { result.innerHTML = "中吉"; }
-		if (n === 2) { result.innerHTML = "小吉"; }
-
-	</script>
-</body>
-
+				if (n === 0) { result.innerHTML = "大吉"; }
+				if (n === 1) { result.innerHTML = "中吉"; }
+				if (n === 2) { result.innerHTML = "小吉"; }
+			}
+		</script>
+	</body>
 </html>
